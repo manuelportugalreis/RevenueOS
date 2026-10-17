@@ -1,0 +1,16 @@
+{
+  "evidence_id": "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+  "document_id": "4e711974-0281-5219-a83a-2431e0e1d055",
+  "version_id": "4bd49088-92fa-5f4b-bf06-de17f6e8a962",
+  "chunk_id": "b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+  "version": 1,
+  "title": "SYNTHETIC Getting Started",
+  "heading": "Getting Started",
+  "start_offset": 19,
+  "end_offset": 88,
+  "text": "Onboarding includes a kickoff workshop and a configuration checklist.",
+  "text_hash": "a262c38424b22603afd6ca7870a1ee5cd14bd22040a676ec1900a94971757af2",
+  "claim_key": "onboarding",
+  "claim_value": "Onboarding includes a kickoff workshop and a configuration checklist.",
+  "outreach_allowed": true
+}

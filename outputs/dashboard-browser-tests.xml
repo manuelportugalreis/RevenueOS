@@ -1,0 +1,8 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="16.327015999999997">
+<testsuite name="dashboard.spec.ts" timestamp="2026-10-16T23:15:18.271Z" hostname="" tests="2" failures="0" skipped="0" time="13.982" errors="0">
+<testcase name="executive to cited draft to exact human approval, then logout" classname="dashboard.spec.ts" time="10.168">
+</testcase>
+<testcase name="mobile navigation, forbidden origin, expired session and API error" classname="dashboard.spec.ts" time="3.814">
+</testcase>
+</testsuite>
+</testsuites>

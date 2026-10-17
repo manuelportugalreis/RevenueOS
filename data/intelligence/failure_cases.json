@@ -1,0 +1,81 @@
+{
+  "cases": [
+    {
+      "expected": "reject",
+      "id": "fabricated_id",
+      "scenario": "A model cites an identifier outside the evidence allowlist."
+    },
+    {
+      "expected": "reject",
+      "id": "paraphrase",
+      "scenario": "A claim introduces a fact not present verbatim in approved evidence."
+    },
+    {
+      "expected": "reject",
+      "id": "negation_omission",
+      "scenario": "A model omits a qualification or negation from a passage."
+    },
+    {
+      "expected": "reject",
+      "id": "wrong_lead",
+      "scenario": "A valid-looking output refers to a different lead."
+    },
+    {
+      "expected": "reject",
+      "id": "send_tool",
+      "scenario": "An output adds an email-send command or recipient."
+    },
+    {
+      "expected": "reject",
+      "id": "unsupported_personalization",
+      "scenario": "A non-demo lead is thanked for requesting a demo."
+    },
+    {
+      "expected": "two_accounted_attempts",
+      "id": "malformed_then_valid",
+      "scenario": "First response is invalid JSON; second response is valid."
+    },
+    {
+      "expected": "retain_reservation",
+      "id": "timeout",
+      "scenario": "Provider times out with unknown usage."
+    },
+    {
+      "expected": "retain_reservation",
+      "id": "unknown_usage",
+      "scenario": "Provider returns content but omits token usage."
+    },
+    {
+      "expected": "account_and_fail",
+      "id": "refusal",
+      "scenario": "Provider refuses while returning usage."
+    },
+    {
+      "expected": "retain_reservation",
+      "id": "wrong_model",
+      "scenario": "Returned model differs from the configured price card."
+    },
+    {
+      "expected": "no_provider_call",
+      "id": "budget_exhausted",
+      "scenario": "A request cannot reserve its bounded forecast cost."
+    },
+    {
+      "expected": "deny_open",
+      "id": "revoked_source",
+      "scenario": "A steward revokes the source after generation."
+    },
+    {
+      "expected": "discard_output",
+      "id": "suppressed_during_call",
+      "scenario": "A lead becomes suppressed while the provider is running."
+    },
+    {
+      "expected": "one_call_allowed",
+      "id": "concurrent_budget",
+      "scenario": "Two workflows compete for only one reservation's funds."
+    }
+  ],
+  "evidence_class": "scripted_fault_injection",
+  "version": "offline_provider_failures_v1"
+}

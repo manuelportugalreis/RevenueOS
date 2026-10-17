@@ -1,0 +1,145 @@
+{
+  "evidence_class": "observed_synthetic_restore_drill",
+  "target": "revenueos_restore_check_upgrade1",
+  "source_database": "revenueos_intelligence_demo",
+  "dump_seconds": 1.6183295999944676,
+  "restore_seconds": 2.628184000001056,
+  "tables": {
+    "accounts": {
+      "rows": 200,
+      "sha256": "8e31a611e258de98b43c8a78ac2027b04bd09222e9bf9a586f26e302532b4f59"
+    },
+    "action_approvals": {
+      "rows": 1,
+      "sha256": "73c48ef39dcb2a167a1866d831ede198610a447e0a2decfcd8bc63d64d41f51a"
+    },
+    "action_receipts": {
+      "rows": 1,
+      "sha256": "a6a41a66e6d36db40894ce464eadb75ac1cf162c67d6ddd23aac5898ebe56bfe"
+    },
+    "ai_attempts": {
+      "rows": 41,
+      "sha256": "a5f9ee130fd4cd05d6a63f4cd437e7bf42c9c7e998aaa15eb643e11c8f0f4590"
+    },
+    "ai_budgets": {
+      "rows": 1,
+      "sha256": "b6ba11447b4d14a936137e12fe26d4cb61a297f80303924f3e86e067d8b29d0b"
+    },
+    "ai_runs": {
+      "rows": 1925,
+      "sha256": "8d358329b9cd38bb205ca93e31b93fd922163ff3f82a1c7e6be4f81f1bee6a3b"
+    },
+    "alembic_version": {
+      "rows": 1,
+      "sha256": "28e15f161f30a1d885b892bf8a93d50c1fa6be0ea3323c6263d33ac996d5c6b2"
+    },
+    "bounded_workflows": {
+      "rows": 534,
+      "sha256": "ccd151a5691a95b09cb65412ecf3eafa84928c97223a7c64b33f1c469601e75a"
+    },
+    "datasets": {
+      "rows": 1,
+      "sha256": "612a21a8b13635979af1aa6858fc7dd5a92c62cfbb033c5b0f8689dd07b3b053"
+    },
+    "document_chunks": {
+      "rows": 19,
+      "sha256": "66e5fd277bb3deaeae3f94b4475126c10d59a6d3f6b9366fb701b265b6de0428"
+    },
+    "document_versions": {
+      "rows": 19,
+      "sha256": "c74749ebbf9fd663bee27020f9c082949652244644c1e2d2f4bd82c53ea3d262"
+    },
+    "documents": {
+      "rows": 19,
+      "sha256": "b1fc541ca6c7284ae4e32a60b85f38695b99b001cd96d2bb7335109354542b82"
+    },
+    "import_batches": {
+      "rows": 1,
+      "sha256": "4e42f6d8eda0934c348f75f68114b2e32a71102ea58031359693d8045213895e"
+    },
+    "import_errors": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "interactions": {
+      "rows": 1948,
+      "sha256": "ac27bb8a61371df56c6867f1f6bcf36f0fc7d901299b4b8803ee4bf6359be824"
+    },
+    "knowledge_memberships": {
+      "rows": 2,
+      "sha256": "e563b9a2b128d3afe7884d50b4f037c024a02cd9d402db1a9c6e963b6695453c"
+    },
+    "lead_outcomes": {
+      "rows": 941,
+      "sha256": "2c22c5b1f72e0f41aba7fb160a717bc95746c062b4e8ca121dcab39608591856"
+    },
+    "lead_private": {
+      "rows": 1000,
+      "sha256": "de5beb7c54a76d69c74480f7cb85c22f469241bbc1078a04affe136ef945f928"
+    },
+    "leads": {
+      "rows": 1000,
+      "sha256": "1e225a814244d1c18dd4d284b926b8828ecd586cfbfbdd617bd44baf458edcff"
+    },
+    "opportunities": {
+      "rows": 334,
+      "sha256": "564123eda5600adf5dcfb58b871870fcf890d12697b48a4c04c2fe085bec86b0"
+    },
+    "opportunity_leads": {
+      "rows": 334,
+      "sha256": "a3d34fead038ec604641a3c1965e65e0b38eba7e03c1153aab81c9a4cc74050f"
+    },
+    "opportunity_stage_events": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "organizations": {
+      "rows": 1,
+      "sha256": "364a12615bbc56e3b934ca28a0924aacd65b45579c95c9ee5002982e7bfad910"
+    },
+    "outreach_actions": {
+      "rows": 1,
+      "sha256": "27e0ca1d63ca713428ad7bb2324dd085fadcb4a10f59aea3b88cfec152b92e1f"
+    },
+    "outreach_versions": {
+      "rows": 1,
+      "sha256": "8c3b32a3044ff94f520e230673fb47471ba8ae9c9ece470a655481b1167cdbbd"
+    },
+    "score_runs": {
+      "rows": 1000,
+      "sha256": "de2a142b416c1678afa238c7a4613a4bf58965bb2fec65d580b02898281dc5ac"
+    },
+    "suppression_tombstones": {
+      "rows": 44,
+      "sha256": "3d73b735e9228d321d5410042835dada8cc48a6b7b22a9fb5c6cb1e5273c9105"
+    },
+    "web_login_attempts": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "web_sessions": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "web_workflow_requests": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "workflow_audit": {
+      "rows": 6408,
+      "sha256": "05a547a7876a75df0f754731a734eaf7b9717ff72b6753588b0b0918d198a123"
+    },
+    "workflow_reviewers": {
+      "rows": 1,
+      "sha256": "cf6bf6a8f310e69ab422bc6d035b303037ca9c269096b7e642b709b0fed74140"
+    }
+  },
+  "schema_version": "0008",
+  "tenant_policies_restored": 30,
+  "all_fingerprints_equal": true,
+  "archive_sha256": "da50d48986fc67d3d1c1597428ecd0f66857f7e6dbb3a6f339a830b76ca337ee",
+  "encryption_tested": false,
+  "production_rpo_rto": null,
+  "role_grants": "Not restored (--no-acl); re-provision runtime/login grants separately.",
+  "cleanup": "Target retained for inspection; no existing database was dropped."
+}

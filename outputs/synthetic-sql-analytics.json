@@ -1,0 +1,62 @@
+{
+  "metric_version": "revenue_metrics_v1",
+  "dataset_id": "3df42c87-74ab-46ff-bebd-1b033db2cb55",
+  "dataset_version": 1,
+  "data_mode": "synthetic",
+  "source_system": "synthetic_crm",
+  "source_hash": "83600a9df6ab84e4141126d869eed9703bedfea0686124376e35f0860a8e4ac5",
+  "observed_at": "2026-10-01T00:00:00+00:00",
+  "published_at": "2026-10-16T22:18:40.657627+00:00",
+  "interval": {
+    "start_inclusive": "2026-08-01T00:00:00+00:00",
+    "end_exclusive": "2026-10-01T00:00:00+00:00"
+  },
+  "freshness_note": "Snapshot as observed; no continuous CRM coverage is asserted.",
+  "coverage_note": "No recorded response is unknown contact status, not proof of no contact.",
+  "import_quality": {
+    "accepted_count": 28,
+    "quarantined_count": 6,
+    "duplicate_count": 1
+  },
+  "leads": {
+    "total_cohort": 8,
+    "excluded_test_internal": 1,
+    "excluded_deleted": 1,
+    "inbound_leads": 6,
+    "suppressed_leads": 1,
+    "response_observed": 3,
+    "no_recorded_response": 3,
+    "response_median_hours": 2.0,
+    "response_p90_hours": 3.6,
+    "qualification_denominator": 3,
+    "qualified_30d": 1,
+    "immature_leads": 1,
+    "missing_or_incomplete_outcomes": 2,
+    "qualification_rate": 0.3333333333333333
+  },
+  "lead_sources": [
+    {
+      "source": "website",
+      "lead_count": 6
+    }
+  ],
+  "opportunities": {
+    "won": 1,
+    "lost": 1,
+    "closed_denominator": 2,
+    "win_rate": 0.5
+  },
+  "open_pipeline_by_currency": [
+    {
+      "currency": "EUR",
+      "amount": "4000.20",
+      "opportunity_count": 1
+    },
+    {
+      "currency": "USD",
+      "amount": "3000.10",
+      "opportunity_count": 1
+    }
+  ],
+  "pipeline_scope": "All open opportunities at snapshot observation time, independent of interval"
+}

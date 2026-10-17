@@ -1,0 +1,15 @@
+{
+  "evidence_class": "simulation_not_observed",
+  "currency": "USD",
+  "horizon": "monthly",
+  "assumption_source": "illustrative_analyst_inputs_not_sponsor_or_observed",
+  "base": {
+    "monthly_leads": 1000,
+    "baseline_minutes": 5,
+    "assisted_minutes_including_review": 3,
+    "loaded_hourly_usd": 60,
+    "monthly_operating_usd": 100,
+    "monthly_amortized_setup_usd": 300
+  },
+  "sensitivity_assisted_minutes": [3, 5, 7]
+}

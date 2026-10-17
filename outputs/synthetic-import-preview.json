@@ -1,0 +1,58 @@
+{
+  "organization_id": "11111111-1111-4111-8111-111111111111",
+  "data_mode": "synthetic",
+  "bundle_hash": "83600a9df6ab84e4141126d869eed9703bedfea0686124376e35f0860a8e4ac5",
+  "preview_hash": "151f19aa230daac43fd4dbe58baf3ae9127515ec411ba754b0b8b82461df6d3b",
+  "base_version": 1,
+  "total_rows": 35,
+  "accepted": 28,
+  "quarantined": 6,
+  "duplicates": 1,
+  "accepted_by_entity": {
+    "accounts": 2,
+    "leads": 8,
+    "opportunities": 4,
+    "interactions": 6,
+    "opportunity_leads": 2,
+    "opportunity_stage_events": 1,
+    "lead_outcomes": 5
+  },
+  "issues": [
+    {
+      "entity": "accounts",
+      "row_number": 4,
+      "field": "external_id",
+      "code": "conflicting_duplicate"
+    },
+    {
+      "entity": "accounts",
+      "row_number": 5,
+      "field": "external_id",
+      "code": "conflicting_duplicate"
+    },
+    {
+      "entity": "leads",
+      "row_number": 11,
+      "field": "created_at",
+      "code": "datetime_from_date_parsing"
+    },
+    {
+      "entity": "opportunities",
+      "row_number": 6,
+      "field": "amount",
+      "code": "greater_than_equal"
+    },
+    {
+      "entity": "interactions",
+      "row_number": 8,
+      "field": "row",
+      "code": "missing_or_quarantined_parent"
+    },
+    {
+      "entity": "opportunity_leads",
+      "row_number": 4,
+      "field": "row",
+      "code": "missing_or_quarantined_parent"
+    }
+  ]
+}

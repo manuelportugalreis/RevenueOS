@@ -1,0 +1,40 @@
+{
+  "data_mode": "synthetic",
+  "planner": "fixed offline pipeline",
+  "provider": "deterministic template",
+  "live_model_calls": 0,
+  "workflow": {
+    "workflow_id": "bf8eda7c-89d8-4e7f-b681-e3cb063f4dce",
+    "state": "review_pending",
+    "failure_code": null,
+    "recommendation_id": "2347ffc3-5981-4abf-84f4-b4da9b11b4a9",
+    "policy_version": "bounded_reads_v1",
+    "external_delivery_enabled": false
+  },
+  "prepared_action": {
+    "action_id": "4098f195-90ed-43ae-8625-96f25fa1ff99",
+    "version": 1,
+    "payload": {
+      "kind": "email_draft",
+      "recipient": "contact1@company1.example",
+      "subject": "Following up on your demo request",
+      "body": "Thank you for requesting a demo.\n\nOnboarding includes a kickoff workshop and a configuration checklist.\n\nWould a short discussion be useful?",
+      "recommendation_id": "2347ffc3-5981-4abf-84f4-b4da9b11b4a9",
+      "recommendation_hash": "3d60d67a7da20ff914722c9a89c2048f49a974dca442f5125057ec75c3749ee7",
+      "evidence_ids": [
+        "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc"
+      ]
+    },
+    "payload_hash": "ccbf0dac5b80785f10254afe86e66dcc1df76042a900971b4ba0faa06f36db2b",
+    "approved": false,
+    "external_delivery_enabled": false
+  },
+  "attack": {
+    "workflow_id": "0bc48a30-d396-4a36-a3f5-5b76bcbfb6ad",
+    "state": "failed",
+    "failure_code": "tool_permission_schema_or_query_denied",
+    "recommendation_id": null,
+    "policy_version": "bounded_reads_v1",
+    "external_delivery_enabled": false
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "template": {
+    "run_id": "5017b7b6-12cd-4660-b707-10e983fe7041",
+    "state": "review_pending",
+    "failure_code": null,
+    "recommendation": {
+      "schema_version": "recommendation_v1",
+      "lead_id": "b729bcbb-c654-5397-8db6-2507dcbb1be7",
+      "action": "contact",
+      "rationale_claims": [
+        {
+          "text": "Onboarding includes a kickoff workshop and a configuration checklist.",
+          "evidence_id": "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+          "quote": "Onboarding includes a kickoff workshop and a configuration checklist."
+        }
+      ],
+      "missing_information": [
+        "use_case",
+        "contact_coverage"
+      ],
+      "risk_flags": [
+        "human_review_required"
+      ],
+      "draft": {
+        "subject": "Following up on your demo request",
+        "opening": "Thank you for requesting a demo.",
+        "claims": [
+          {
+            "text": "Onboarding includes a kickoff workshop and a configuration checklist.",
+            "evidence_id": "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+            "quote": "Onboarding includes a kickoff workshop and a configuration checklist."
+          }
+        ],
+        "closing": "Would a short discussion be useful?"
+      },
+      "abstention_reason": null
+    },
+    "human_review_required": true,
+    "approved": false,
+    "delivery_available": false,
+    "attempts": []
+  },
+  "scripted_fixture": {
+    "run_id": "6a3a1d87-bd74-4a72-b00a-bcdd096b1c1d",
+    "state": "review_pending",
+    "failure_code": null,
+    "recommendation": {
+      "schema_version": "recommendation_v1",
+      "lead_id": "b729bcbb-c654-5397-8db6-2507dcbb1be7",
+      "action": "contact",
+      "rationale_claims": [
+        {
+          "text": "Onboarding includes a kickoff workshop and a configuration checklist.",
+          "evidence_id": "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+          "quote": "Onboarding includes a kickoff workshop and a configuration checklist."
+        }
+      ],
+      "missing_information": [
+        "use_case",
+        "contact_coverage"
+      ],
+      "risk_flags": [
+        "human_review_required"
+      ],
+      "draft": {
+        "subject": "Following up on your demo request",
+        "opening": "Thank you for requesting a demo.",
+        "claims": [
+          {
+            "text": "Onboarding includes a kickoff workshop and a configuration checklist.",
+            "evidence_id": "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+            "quote": "Onboarding includes a kickoff workshop and a configuration checklist."
+          }
+        ],
+        "closing": "Would a short discussion be useful?"
+      },
+      "abstention_reason": null
+    },
+    "human_review_required": true,
+    "approved": false,
+    "delivery_available": false,
+    "attempts": [
+      {
+        "attempt": 1,
+        "provider_kind": "scripted_fixture",
+        "model": "scripted-fixture-v1",
+        "state": "accounted",
+        "input_tokens": 500,
+        "output_tokens": 180,
+        "estimated_cost_usd": "0.00061000",
+        "reserved_usd": "0.00536400",
+        "cost_basis": "fixture_simulated",
+        "outcome": "validated",
+        "latency_ms": "0.000",
+        "price_version": "SIMULATED-not-provider-pricing-v1"
+      }
+    ]
+  }
+}

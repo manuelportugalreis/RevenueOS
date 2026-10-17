@@ -1,0 +1,8 @@
+data_mode,external_id,source_updated_at,lead_external_id,occurred_at,direction,channel,actor_type,summary
+synthetic,I1,2026-09-30T00:00:00Z,L1,2026-08-01T00:01:00Z,outbound,email,automation,SYNTHETIC interaction
+synthetic,I2,2026-09-30T00:00:00Z,L1,2026-08-01T02:00:00Z,outbound,email,human,SYNTHETIC interaction
+synthetic,I3,2026-09-30T00:00:00Z,L1,2026-08-01T03:00:00Z,outbound,email,human,SYNTHETIC interaction
+synthetic,I4,2026-09-30T00:00:00Z,L2,2026-08-01T04:00:00Z,outbound,email,human,SYNTHETIC interaction
+synthetic,I5,2026-09-30T00:00:00Z,L4,2026-09-20T01:00:00Z,outbound,email,human,SYNTHETIC interaction
+synthetic,I6,2026-09-30T00:00:00Z,L3,2026-08-01T00:01:00Z,outbound,email,automation,SYNTHETIC interaction
+synthetic,I_BAD,2026-09-30T00:00:00Z,NO_LEAD,2026-08-01T01:00:00Z,outbound,email,human,SYNTHETIC interaction

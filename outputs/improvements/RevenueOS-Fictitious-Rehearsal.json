@@ -1,0 +1,95 @@
+{
+  "favorable": {
+    "evidence_class": "synthetic_scripted_rehearsal",
+    "pairs": 12,
+    "arms": {
+      "baseline": {
+        "assigned": 12,
+        "timing_missing": 0,
+        "complete_case_mean_seconds": 315.0,
+        "all_assigned_mean_seconds": 315.0,
+        "completion_rate": 1.0,
+        "acceptable_rate_all_assigned": 1.0,
+        "quality_missing": 0
+      },
+      "assisted": {
+        "assigned": 12,
+        "timing_missing": 0,
+        "complete_case_mean_seconds": 195.0,
+        "all_assigned_mean_seconds": 195.0,
+        "completion_rate": 1.0,
+        "acceptable_rate_all_assigned": 1.0,
+        "quality_missing": 0
+      }
+    },
+    "assumed_time_reduction": 0.38095238095238093,
+    "scenario_decision": "scenario_meets_assumed_thresholds",
+    "actual_pilot_status": "not_run_no_company",
+    "real_participants": 0,
+    "measured_human_time_saved": null,
+    "realized_roi": null,
+    "uncertainty": "Scripted inputs; no human observations or pilot confidence claim."
+  },
+  "rework_downside": {
+    "evidence_class": "synthetic_scripted_rehearsal",
+    "pairs": 12,
+    "arms": {
+      "baseline": {
+        "assigned": 12,
+        "timing_missing": 0,
+        "complete_case_mean_seconds": 315.0,
+        "all_assigned_mean_seconds": 315.0,
+        "completion_rate": 1.0,
+        "acceptable_rate_all_assigned": 1.0,
+        "quality_missing": 0
+      },
+      "assisted": {
+        "assigned": 12,
+        "timing_missing": 0,
+        "complete_case_mean_seconds": 405.0,
+        "all_assigned_mean_seconds": 405.0,
+        "completion_rate": 1.0,
+        "acceptable_rate_all_assigned": 0.75,
+        "quality_missing": 0
+      }
+    },
+    "assumed_time_reduction": -0.2857142857142857,
+    "scenario_decision": "guardrail_failed",
+    "actual_pilot_status": "not_run_no_company",
+    "real_participants": 0,
+    "measured_human_time_saved": null,
+    "realized_roi": null,
+    "uncertainty": "Scripted inputs; no human observations or pilot confidence claim."
+  },
+  "missing_measurement": {
+    "evidence_class": "synthetic_scripted_rehearsal",
+    "pairs": 12,
+    "arms": {
+      "baseline": {
+        "assigned": 12,
+        "timing_missing": 0,
+        "complete_case_mean_seconds": 315.0,
+        "all_assigned_mean_seconds": 315.0,
+        "completion_rate": 1.0,
+        "acceptable_rate_all_assigned": 1.0,
+        "quality_missing": 0
+      },
+      "assisted": {
+        "assigned": 12,
+        "timing_missing": 1,
+        "complete_case_mean_seconds": 193.63636363636363,
+        "all_assigned_mean_seconds": null,
+        "completion_rate": 1.0,
+        "acceptable_rate_all_assigned": 1.0,
+        "quality_missing": 0
+      }
+    },
+    "assumed_time_reduction": null,
+    "scenario_decision": "inconclusive_missingness",
+    "actual_pilot_status": "not_run_no_company",
+    "real_participants": 0,
+    "measured_human_time_saved": null,
+    "realized_roi": null,
+    "uncertainty": "Scripted inputs; no human observations or pilot confidence claim."
+  }
+}

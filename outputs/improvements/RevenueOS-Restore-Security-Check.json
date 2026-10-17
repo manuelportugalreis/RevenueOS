@@ -1,0 +1,20 @@
+{
+  "evidence_class": "observed_synthetic_restore_security",
+  "posture": {
+    "role": "revenueos_synthetic_web_login",
+    "rolsuper": false,
+    "rolbypassrls": false,
+    "rolcreatedb": false,
+    "rolcreaterole": false,
+    "owns_application_relations": false,
+    "restricted": true
+  },
+  "unscoped_leads": 0,
+  "scoped_leads": 1000,
+  "management_documents_for_reader": 0,
+  "public_function_execute": 0,
+  "public_schema_create": 0,
+  "grants_reprovisioned": true,
+  "password_authentication_tested": false,
+  "note": "Native non-owner login and RLS tested. Local PostgreSQL trust authentication; no TLS/cloud/Google claim."
+}

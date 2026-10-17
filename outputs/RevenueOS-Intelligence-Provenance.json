@@ -1,0 +1,43 @@
+{
+  "evidence_class": "local_synthetic_offline_verification",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "postgresql_tested": "18.6",
+  "git_commit": null,
+  "source_state": "uncommitted; verify source hashes",
+  "source_hashes": {
+    "migrations/env.py": "7f7911a64e51a058c6b01f75403774268a12d23dfc2a4370195fa22b4c2d834e",
+    "migrations/versions/0001_data_foundation.py": "f7775be4dec94e01133428e7b96631ac4460adbdbb7ba5cb89dbe3611610639c",
+    "migrations/versions/0001_data_foundation.sql": "f6270d2d6511401bbb9e2b2edea48cfeda71cc94c3a2d403f53a79e490d305b9",
+    "migrations/versions/0002_analytics_views.py": "3980d0dc704ec426ffadc71de0caa3206d42bcfa096bb831f6a876bf1e412b56",
+    "migrations/versions/0003_integrity_guards.py": "c812e84bc9203eaaef803751f932d23e7ee34ae3e6d287da57231b629f0b1d53",
+    "migrations/versions/0004_intelligence.py": "c754ebe7584bb1be3d7863ede40580bd7ef4e43cf27e60a98367963fc589ec9e",
+    "migrations/versions/0004_intelligence.sql": "b347ce79d3d2258ce4b7abec92be3a2307088b121bff8fafe7a94100f963f83c",
+    "src/revenueos/__init__.py": "710933d935723129f671641e979bafae199e54c2af2799acd49f67d59d492048",
+    "src/revenueos/analytics.py": "dfd8010325e0dfed16ecdf5adb2b00c88a481e7a6c5fa4704d39fc1a6e982c4b",
+    "src/revenueos/cli.py": "6746dca9f09f947613ccc674d8d8b389513ef703c24449e3236019847216923c",
+    "src/revenueos/contracts.py": "c2821e1d6277c3a91bbf4743ef3fb52afc78f6bf875c0f9708c1d4c3417e4fd6",
+    "src/revenueos/db.py": "b36e7c96931299369be8d611c9aa512fce4934a1b5ec6a6385de2aef743fbf43",
+    "src/revenueos/evaluation.py": "778ea41f5e822f1ca566ca6a0a1a515ce9a459cdd56fd7b4411490bd509935c4",
+    "src/revenueos/ingestion.py": "ab2b82c331da7503d06677af29e0ca68138dea5c6447582437aa9c4a70731361",
+    "src/revenueos/knowledge.py": "a62dc6705061f21bf6e2b5119175d038f5ad381467230f6e54d856788579e099",
+    "src/revenueos/providers.py": "acb2e4d7b9805a8a785d08b2e6bce37d0a63dd2c9b7d0d0b26681c22298d86ad",
+    "src/revenueos/recommendations.py": "d2a5ebf12cb8569267859b95875cae34dedc91ca23058627197c256cd627d1a0",
+    "src/revenueos/scoring.py": "04babbd7576574041e419daee5122f5c05b3da96dfae1a6708724424f46d9e21",
+    "src/revenueos/sql/lead_metrics.sql": "17df853dbbe0a397c7e39acbeafea396b938748772a058e0ec5656bf8317a087",
+    "src/revenueos/sql/lead_sources.sql": "ee647dfeeae9dd034d9ebc053dc67afa99ea5642a43b4c5fd532b17607d0c592",
+    "src/revenueos/sql/opportunity_metrics.sql": "e7f182842c5bbf7ba80fa32e183f1ae2e137889bdd9d3df5fb1c644b930ae885",
+    "src/revenueos/sql/pipeline.sql": "9371a094565a3c2b44a41ac50ce478739b2747a44f955fa5bbc96f7dad3c5015",
+    "src/revenueos/synthetic.py": "a25c80ac7fe4b6e7ad1d132c931fb419f630c881372366d424ca64eecf61bb24"
+  },
+  "dependency_lock_sha256": "2a39c60488c1e701b16b3797824522db7c84fb07f2e415274d79e863aaae7f75",
+  "test_result": {
+    "tests": "109",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "60.397"
+  },
+  "live_api_calls": 0,
+  "predictive_model_trained": false
+}

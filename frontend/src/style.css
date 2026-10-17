@@ -1,0 +1,415 @@
+:root {
+  font-family:
+    Inter,
+    Segoe UI,
+    Arial,
+    sans-serif;
+  color: #183039;
+  background: #f3f6f6;
+  font-synthesis: none;
+  line-height: 1.55;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input {
+  font: inherit;
+}
+button,
+.button {
+  background: #11665c;
+  color: white;
+  border: 1px solid #11665c;
+  border-radius: 6px;
+  padding: 9px 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+button:hover {
+  background: #084c44;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #b86b13;
+  outline-offset: 3px;
+}
+input {
+  padding: 9px 12px;
+  border: 1px solid #9cabb0;
+  border-radius: 5px;
+  background: white;
+  width: 100%;
+  color: #183039;
+}
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+label input {
+  display: block;
+  margin: 6px 0 16px;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 1.22;
+  letter-spacing: -0.045em;
+  margin: 6px 0 12px;
+}
+h2 {
+  font-size: 1.15rem;
+  margin: 0 0 14px;
+}
+h3 {
+  font-size: 1rem;
+}
+p {
+  margin: 8px 0 16px;
+}
+.muted {
+  color: #52666e;
+  font-size: 0.88rem;
+}
+.eyebrow {
+  font-size: 0.69rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: #45646b;
+}
+.brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #73d6ba;
+}
+.brand span {
+  font-size: 1.22rem;
+  color: inherit;
+  letter-spacing: -0.025em;
+}
+.shell {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  min-height: 100vh;
+}
+aside {
+  background: #142f36;
+  color: #e0eded;
+  padding: 30px 22px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+aside .muted {
+  color: #b1c9cd;
+}
+nav {
+  display: grid;
+  gap: 8px;
+  margin-top: 32px;
+}
+nav button {
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: #d1e0e2;
+}
+nav button[aria-current] {
+  background: #285057;
+  color: white;
+  border-left: 3px solid #73d6ba;
+}
+nav button:hover {
+  background: #285057;
+}
+.aside-bottom {
+  margin-top: auto;
+  font-size: 0.82rem;
+}
+main {
+  padding: 38px 44px;
+  min-width: 0;
+  max-width: 1650px;
+  width: 100%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+.context {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.78rem;
+  padding: 14px 0;
+  border-top: 1px solid #d4dedf;
+  border-bottom: 1px solid #d4dedf;
+  margin: 20px 0 28px;
+}
+.badge {
+  display: inline-block;
+  background: #dbeee7;
+  color: #155644;
+  font-size: 0.69rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+section {
+  background: white;
+  border: 1px solid #d8e1e1;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 0 0 22px;
+  box-shadow: 0 2px 3px #18303904;
+}
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.kpi h2 {
+  font-size: 0.81rem;
+  color: #52666e;
+  font-weight: 600;
+}
+.kpi strong {
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+.kpi p {
+  font-size: 0.75rem;
+  margin-top: 12px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 22px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.84rem;
+}
+th {
+  text-align: left;
+  color: #52666e;
+  font-size: 0.76rem;
+  background: #f5f8f7;
+}
+td,
+th {
+  padding: 13px 9px;
+  border-bottom: 1px solid #dce5e4;
+}
+.number {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+caption {
+  text-align: left;
+  color: #52666e;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+.filters {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.filters input {
+  margin: 4px 0;
+}
+.filters label {
+  font-size: 0.75rem;
+}
+.filters button {
+  margin-top: 18px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #dce5e4;
+  font-size: 0.85rem;
+}
+.detail {
+  margin-top: 24px;
+  background: #f3f8f6;
+  border: 1px solid #c8ded5;
+  padding: 22px;
+  border-radius: 6px;
+}
+dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  font-size: 0.85rem;
+}
+dd {
+  text-align: right;
+}
+.message {
+  white-space: pre-wrap;
+  font: inherit;
+  background: white;
+  padding: 20px;
+  border: 1px solid #d4dedf;
+}
+.hash {
+  font-size: 0.73rem;
+  overflow-wrap: anywhere;
+  color: #52666e;
+}
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+.buttons button:last-child {
+  background: #fff;
+  color: #7c2923;
+  border-color: #7c2923;
+}
+.error,
+.warning {
+  padding: 18px;
+  background: #fff0e8;
+  border: 1px solid #c68855;
+  border-radius: 6px;
+  color: #713813;
+  margin-bottom: 20px;
+}
+.error button {
+  margin-left: 15px;
+}
+.notice {
+  padding: 15px;
+  background: #e0f1e9;
+  color: #155644;
+}
+.citation {
+  border: 2px solid #11665c;
+}
+blockquote {
+  margin: 16px 0;
+  padding: 15px;
+  border-left: 3px solid #11665c;
+  background: #edf5f1;
+}
+footer {
+  font-size: 0.73rem;
+  color: #52666e;
+  margin-top: 32px;
+}
+.login {
+  max-width: 530px;
+  margin: 7vh auto;
+  padding: 35px;
+}
+.login .brand {
+  color: #11665c;
+  margin-bottom: 40px;
+}
+.login h1 {
+  font-size: 2.5rem;
+}
+.login form {
+  margin-top: 28px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 1100px) {
+  .kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  main {
+    padding: 28px 24px;
+  }
+  .shell {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .shell {
+    display: block;
+  }
+  aside {
+    position: static;
+    height: auto;
+    padding: 18px;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    gap: 3px;
+  }
+  .aside-bottom {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .aside-bottom p {
+    display: none;
+  }
+  header {
+    display: block;
+  }
+  h1 {
+    font-size: 1.65rem;
+  }
+  main {
+    padding: 22px 14px;
+  }
+  section {
+    padding: 18px;
+    overflow-x: auto;
+  }
+  .kpis {
+    gap: 10px;
+  }
+  .kpi strong {
+    font-size: 1.7rem;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .context {
+    gap: 10px;
+  }
+  .login {
+    margin: 0 auto;
+  }
+}

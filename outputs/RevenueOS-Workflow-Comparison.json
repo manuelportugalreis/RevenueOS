@@ -1,0 +1,333 @@
+{
+  "protocol": "paired_synthetic_workflow_v1",
+  "evidence_class": "synthetic_observed_software",
+  "started_at": "2026-10-17T01:35:45.571959+00:00",
+  "completed_at": "2026-10-17T01:36:38.763524+00:00",
+  "runtime": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "postgres": "PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit"
+  },
+  "evidence_at": "2026-10-16T12:00:00+00:00",
+  "dataset_id": "fe4f987b-69df-4c4a-a562-892592704592",
+  "organization_id": "11111111-1111-4111-8111-111111111111",
+  "repetitions": 2,
+  "seed": 20261016,
+  "warmup_attempts": 8,
+  "measured_attempts": 400,
+  "raw_attempts": 408,
+  "fixture_hashes": {
+    "cases.json": "de0439dabf93bec3aa5b3585c7053dff3bba6d034207b04b8ebb4d4ee6c933d9",
+    "corpus.json": "315b618a2d40ab41aa2ea4ba9a65a3b4c1c7793eb2e5db2a200212e429720863",
+    "failure_cases.json": "296687d4caff11d79b7f4bfc42a92df54e50b39fc06b38cd22ca41e39e00e7de"
+  },
+  "source_hashes": {
+    "src/revenueos/analytics.py": "dfd8010325e0dfed16ecdf5adb2b00c88a481e7a6c5fa4704d39fc1a6e982c4b",
+    "src/revenueos/approvals.py": "24853a13704dbd320602a011fd5e79cf92cd4453c96e91ac158ed4ad8d5facad",
+    "src/revenueos/audit.py": "bb402f49c22a955891f75e9ef2d17ad6e6d9ac53de55b38d40cc0c51ba3c7f05",
+    "src/revenueos/cli.py": "6746dca9f09f947613ccc674d8d8b389513ef703c24449e3236019847216923c",
+    "src/revenueos/comparison.py": "d14fdfa188a224f38095ae26f56e948de1632d4ae750b32b1166a6bbfd31fea2",
+    "src/revenueos/contracts.py": "c2821e1d6277c3a91bbf4743ef3fb52afc78f6bf875c0f9708c1d4c3417e4fd6",
+    "src/revenueos/db.py": "66bd775830dd6f4c60aa08163ed6a4cb2b5e334602283333dd1870e7abd03c8c",
+    "src/revenueos/evaluation.py": "778ea41f5e822f1ca566ca6a0a1a515ce9a459cdd56fd7b4411490bd509935c4",
+    "src/revenueos/ingestion.py": "ab2b82c331da7503d06677af29e0ca68138dea5c6447582437aa9c4a70731361",
+    "src/revenueos/knowledge.py": "c519491d3aa3232c9d8dc4e9cc48d24f60a3d4a3a4525cd51f25b57ee0840b5a",
+    "src/revenueos/providers.py": "acb2e4d7b9805a8a785d08b2e6bce37d0a63dd2c9b7d0d0b26681c22298d86ad",
+    "src/revenueos/recommendations.py": "ece9a638f785fda018bd1ef880c7d38a5b2c3adc821787138d48f746ef739dea",
+    "src/revenueos/scoring.py": "04babbd7576574041e419daee5122f5c05b3da96dfae1a6708724424f46d9e21",
+    "src/revenueos/synthetic.py": "a25c80ac7fe4b6e7ad1d132c931fb419f630c881372366d424ca64eecf61bb24",
+    "src/revenueos/web.py": "5b8024955c7b9194399eea297b47fdb31c3f9fe61ed37d2e2776a44cf8ac55ba",
+    "src/revenueos/web_auth.py": "b214a68715ee54e40d5ced3255a207f9e8c9b26b79c23a53f8ef73c8a55f0dd9",
+    "src/revenueos/workflows.py": "13d66b8bebbd789627791e111ad55de3b7962316b736ac95c5545133cd2d86af",
+    "src/revenueos/workflow_cli.py": "0882a7b70a149de409914224c3b18d05c1903001382273b551a3d17fc8b66d9a",
+    "src/revenueos/__init__.py": "710933d935723129f671641e979bafae199e54c2af2799acd49f67d59d492048",
+    "requirements.lock": "96044f30311be646b83f8e594bcfe69273a621074d651d4e95625a21c5a14b32",
+    "frontend/package-lock.json": "f169da80c8d43801eb7f5bf9eca3d97569efa1e66d163feceaec3ec7cad474cc",
+    "docs/21-comparison-acceptance.md": "6c058fcf8e45aa2548d736348185146fda6cbe736b1176521e750c29cd9623f2"
+  },
+  "raw_sha256": "605c1320679ac9b4e25b1b31f90def6435bfe6f7a828d2c184b2cad8c103b00a",
+  "policy_version": "bounded_reads_v1",
+  "quality_counting": "Unique first repetitions; technical failures never credited as abstentions.",
+  "overall": {
+    "baseline_title_template": {
+      "attempts": 200,
+      "unique_tasks": 100,
+      "states": {
+        "abstained": 184,
+        "review_pending": 16
+      },
+      "fixture_task_successes": 66,
+      "fixture_task_success_rate": 0.66,
+      "answerable_tasks": 40,
+      "abstention_tasks": 60,
+      "relevant_completions": 7,
+      "false_abstentions": 33,
+      "false_abstention_rate": 0.825,
+      "correct_abstentions": 59,
+      "correct_abstention_rate": 0.9833333333333333,
+      "inappropriate_completions": 1,
+      "unsupported_completions": 0,
+      "technical_failures_all_attempts": 0,
+      "mean_software_latency_ms": 27.646171999367652,
+      "p95_software_latency_ms": 43.89673500700154,
+      "provider_attempts": 0,
+      "actual_provider_invoice_usd": null,
+      "human_minutes_per_task": null,
+      "abstention_gates_passed": false
+    },
+    "assisted_bounded_lexical_template": {
+      "attempts": 200,
+      "unique_tasks": 100,
+      "states": {
+        "abstained": 126,
+        "review_pending": 74
+      },
+      "fixture_task_successes": 85,
+      "fixture_task_success_rate": 0.85,
+      "answerable_tasks": 40,
+      "abstention_tasks": 60,
+      "relevant_completions": 31,
+      "false_abstentions": 9,
+      "false_abstention_rate": 0.225,
+      "correct_abstentions": 54,
+      "correct_abstention_rate": 0.9,
+      "inappropriate_completions": 6,
+      "unsupported_completions": 0,
+      "technical_failures_all_attempts": 0,
+      "mean_software_latency_ms": 201.9765750002989,
+      "p95_software_latency_ms": 256.46510999649746,
+      "provider_attempts": 0,
+      "actual_provider_invoice_usd": null,
+      "human_minutes_per_task": null,
+      "abstention_gates_passed": false
+    },
+    "paired_fixture_success_difference": {
+      "point": 0.19,
+      "interval": [
+        0.03,
+        0.36
+      ],
+      "families": 20,
+      "bootstrap_resamples": 2000,
+      "seed": 20261016,
+      "interpretation": "Descriptive paired family bootstrap, conditional on authored fixture; not pilot inference."
+    },
+    "unstable_case_arms": 0
+  },
+  "splits": {
+    "dev": {
+      "baseline_title_template": {
+        "attempts": 120,
+        "unique_tasks": 60,
+        "states": {
+          "abstained": 112,
+          "review_pending": 8
+        },
+        "fixture_task_successes": 37,
+        "fixture_task_success_rate": 0.6166666666666667,
+        "answerable_tasks": 25,
+        "abstention_tasks": 35,
+        "relevant_completions": 3,
+        "false_abstentions": 22,
+        "false_abstention_rate": 0.88,
+        "correct_abstentions": 34,
+        "correct_abstention_rate": 0.9714285714285714,
+        "inappropriate_completions": 1,
+        "unsupported_completions": 0,
+        "technical_failures_all_attempts": 0,
+        "mean_software_latency_ms": 27.829486665480847,
+        "p95_software_latency_ms": 42.89505501074017,
+        "provider_attempts": 0,
+        "actual_provider_invoice_usd": null,
+        "human_minutes_per_task": null,
+        "abstention_gates_passed": false
+      },
+      "assisted_bounded_lexical_template": {
+        "attempts": 120,
+        "unique_tasks": 60,
+        "states": {
+          "abstained": 68,
+          "review_pending": 52
+        },
+        "fixture_task_successes": 49,
+        "fixture_task_success_rate": 0.8166666666666667,
+        "answerable_tasks": 25,
+        "abstention_tasks": 35,
+        "relevant_completions": 20,
+        "false_abstentions": 5,
+        "false_abstention_rate": 0.2,
+        "correct_abstentions": 29,
+        "correct_abstention_rate": 0.8285714285714286,
+        "inappropriate_completions": 6,
+        "unsupported_completions": 0,
+        "technical_failures_all_attempts": 0,
+        "mean_software_latency_ms": 204.39652083271844,
+        "p95_software_latency_ms": 249.36614999896847,
+        "provider_attempts": 0,
+        "actual_provider_invoice_usd": null,
+        "human_minutes_per_task": null,
+        "abstention_gates_passed": false
+      },
+      "paired_fixture_success_difference": {
+        "point": 0.2,
+        "interval": [
+          -0.05,
+          0.4666666666666667
+        ],
+        "families": 12,
+        "bootstrap_resamples": 2000,
+        "seed": 20261016,
+        "interpretation": "Descriptive paired family bootstrap, conditional on authored fixture; not pilot inference."
+      },
+      "unstable_case_arms": 0
+    },
+    "test": {
+      "baseline_title_template": {
+        "attempts": 80,
+        "unique_tasks": 40,
+        "states": {
+          "abstained": 72,
+          "review_pending": 8
+        },
+        "fixture_task_successes": 29,
+        "fixture_task_success_rate": 0.725,
+        "answerable_tasks": 15,
+        "abstention_tasks": 25,
+        "relevant_completions": 4,
+        "false_abstentions": 11,
+        "false_abstention_rate": 0.7333333333333333,
+        "correct_abstentions": 25,
+        "correct_abstention_rate": 1.0,
+        "inappropriate_completions": 0,
+        "unsupported_completions": 0,
+        "technical_failures_all_attempts": 0,
+        "mean_software_latency_ms": 27.37120000019786,
+        "p95_software_latency_ms": 43.93475500692147,
+        "provider_attempts": 0,
+        "actual_provider_invoice_usd": null,
+        "human_minutes_per_task": null,
+        "abstention_gates_passed": false
+      },
+      "assisted_bounded_lexical_template": {
+        "attempts": 80,
+        "unique_tasks": 40,
+        "states": {
+          "abstained": 58,
+          "review_pending": 22
+        },
+        "fixture_task_successes": 36,
+        "fixture_task_success_rate": 0.9,
+        "answerable_tasks": 15,
+        "abstention_tasks": 25,
+        "relevant_completions": 11,
+        "false_abstentions": 4,
+        "false_abstention_rate": 0.26666666666666666,
+        "correct_abstentions": 25,
+        "correct_abstention_rate": 1.0,
+        "inappropriate_completions": 0,
+        "unsupported_completions": 0,
+        "technical_failures_all_attempts": 0,
+        "mean_software_latency_ms": 198.34665625166963,
+        "p95_software_latency_ms": 270.4654000073788,
+        "provider_attempts": 0,
+        "actual_provider_invoice_usd": null,
+        "human_minutes_per_task": null,
+        "abstention_gates_passed": false
+      },
+      "paired_fixture_success_difference": {
+        "point": 0.175,
+        "interval": [
+          0.05,
+          0.35
+        ],
+        "families": 8,
+        "bootstrap_resamples": 2000,
+        "seed": 20261016,
+        "interpretation": "Descriptive paired family bootstrap, conditional on authored fixture; not pilot inference."
+      },
+      "unstable_case_arms": 0
+    }
+  },
+  "readiness": {
+    "model_training_allowed": false,
+    "decision": "retain_rules_baseline",
+    "counts": {
+      "data_mode": "synthetic",
+      "snapshots": 1,
+      "leads": 1000,
+      "recorded_outcomes": 941,
+      "complete_outcomes": 703,
+      "mature_dated_positives": 127,
+      "updated_after_creation": 1000
+    },
+    "reasons": [
+      "synthetic_labels_are_not_business_outcomes",
+      "no_verified_pre_outcome_feature_snapshots",
+      "no_locked_time_account_disjoint_holdout",
+      "no_independent_business_label_audit",
+      "below_proposed_mature_label_screen"
+    ],
+    "predictive_accuracy": null,
+    "note": "Readiness screen; passing a count heuristic alone cannot authorize training."
+  },
+  "queue_diagnostics": {
+    "evidence_class": "synthetic_snapshot_composition_not_prediction",
+    "capacity_k": 20,
+    "eligible_count": 680,
+    "queues": {
+      "rules": {
+        "selected": 20,
+        "known_synthetic_outcomes": 20,
+        "positive_synthetic_outcomes": 4,
+        "overlap_with_rules_top_k": 20
+      },
+      "fifo": {
+        "selected": 20,
+        "known_synthetic_outcomes": 17,
+        "positive_synthetic_outcomes": 5,
+        "overlap_with_rules_top_k": 2
+      },
+      "newest_first": {
+        "selected": 20,
+        "known_synthetic_outcomes": 0,
+        "positive_synthetic_outcomes": 0,
+        "overlap_with_rules_top_k": 0
+      },
+      "random_seed_42": {
+        "selected": 20,
+        "known_synthetic_outcomes": 12,
+        "positive_synthetic_outcomes": 3,
+        "overlap_with_rules_top_k": 0
+      }
+    },
+    "elapsed_ms": 3375.0,
+    "predictive_accuracy": null,
+    "caveat": "Features/outcomes share a synthetic current snapshot; no predictive holdout."
+  },
+  "real_retrospective": {
+    "status": "not_available",
+    "reason": "No authorized real labels/as-of feature history."
+  },
+  "actual_pilot": {
+    "status": "not_run",
+    "participants": 0,
+    "human_task_times": null,
+    "client_outcomes": null
+  },
+  "costs": {
+    "provider_attempts": 0,
+    "model_calls": 0,
+    "actual_invoice_usd": null,
+    "hosting_usd": null,
+    "labor_usd": null,
+    "basis": "Both arms use deterministic templates; no provider transport is configured."
+  },
+  "limitations": [
+    "Authored, previously seen cases; no new hidden holdout or independent annotation.",
+    "One eligible synthetic lead shared across knowledge tasks; no operational rep study.",
+    "Computation excludes human reading/review/rework; not human time savings.",
+    "Only two serial repetitions, no concurrency/cold-start/network/load SLO claim.",
+    "Family bootstrap describes fixture sensitivity, not population confidence.",
+    "Baseline is a software proxy; human sales work and live LLM behavior unmeasured."
+  ]
+}

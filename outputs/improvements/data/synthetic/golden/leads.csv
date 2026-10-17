@@ -1,0 +1,11 @@
+data_mode,external_id,source_updated_at,account_external_id,source,status,created_at,do_not_contact,deleted_at,name,email,lawful_use_status
+synthetic,L1,2026-09-30T00:00:00Z,A1,website,qualified,2026-08-01T00:00:00Z,false,,SYNTHETIC Person 1,lead1@one.example,approved
+synthetic,L2,2026-09-30T00:00:00Z,A1,website,new,2026-08-01T00:00:00Z,false,,SYNTHETIC Person 2,lead2@one.example,approved
+synthetic,L3,2026-09-30T00:00:00Z,A1,website,new,2026-08-01T00:00:00Z,false,,SYNTHETIC Person 3,lead3@one.example,approved
+synthetic,L4,2026-09-30T00:00:00Z,A1,website,new,2026-09-20T00:00:00Z,false,,SYNTHETIC Person 4,lead4@one.example,approved
+synthetic,L5,2026-09-30T00:00:00Z,A1,website,new,2026-08-01T00:00:00Z,false,,SYNTHETIC Person 5,lead5@one.example,unknown
+synthetic,L6,2026-09-30T00:00:00Z,A1,test,new,2026-08-01T00:00:00Z,false,,SYNTHETIC Person 6,lead6@one.example,approved
+synthetic,L7,2026-09-30T00:00:00Z,A1,website,new,2026-08-01T00:00:00Z,true,,SYNTHETIC Person 7,lead7@one.example,approved
+synthetic,L8,2026-09-30T00:00:00Z,A1,website,new,2026-08-01T00:00:00Z,false,2026-09-01T00:00:00Z,SYNTHETIC Person 8,lead8@one.example,approved
+synthetic,L1,2026-09-30T00:00:00Z,A1,website,qualified,2026-08-01T00:00:00Z,false,,SYNTHETIC Person 1,lead1@one.example,approved
+synthetic,L_BAD,2026-09-30T00:00:00Z,A1,website,qualified,not-a-date,false,,SYNTHETIC Person 1,lead1@one.example,approved

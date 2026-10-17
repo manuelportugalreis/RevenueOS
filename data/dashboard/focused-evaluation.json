@@ -1,0 +1,10 @@
+{
+  "policy": "focused_evidence_v2",
+  "tasks": 100,
+  "successes": 99,
+  "false_abstentions": 0,
+  "inappropriate_completions": 1,
+  "source_sha256": "8915f1f0e429d1cfebaaa8fa47d8899e7556ce2c027d75899532accb5dc49e6d",
+  "scope": "Previously exposed synthetic authored cases; no independent human review or live model.",
+  "orchestration_quality_difference": 0.0
+}

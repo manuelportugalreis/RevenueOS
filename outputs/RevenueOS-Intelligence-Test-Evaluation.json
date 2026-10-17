@@ -1,0 +1,1610 @@
+{
+  "evaluation_version": "offline_intelligence_eval_v1",
+  "split": "test",
+  "cases": 40,
+  "independent_families": 8,
+  "categories": {
+    "answerable": 15,
+    "unanswerable": 10,
+    "conflict": 5,
+    "injection": 5,
+    "restricted": 5
+  },
+  "annotation_source": "agent_authored_not_independently_human_reviewed",
+  "fixture_hashes": {
+    "cases.json": "de0439dabf93bec3aa5b3585c7053dff3bba6d034207b04b8ebb4d4ee6c933d9",
+    "corpus.json": "315b618a2d40ab41aa2ea4ba9a65a3b4c1c7793eb2e5db2a200212e429720863",
+    "failure_cases.json": "296687d4caff11d79b7f4bfc42a92df54e50b39fc06b38cd22ca41e39e00e7de"
+  },
+  "readiness": {
+    "model_training_allowed": false,
+    "decision": "retain_rules_baseline",
+    "counts": {
+      "data_mode": "synthetic",
+      "snapshots": 1,
+      "leads": 1000,
+      "recorded_outcomes": 941,
+      "complete_outcomes": 703,
+      "mature_dated_positives": 127,
+      "updated_after_creation": 1000
+    },
+    "reasons": [
+      "synthetic_labels_are_not_business_outcomes",
+      "no_verified_pre_outcome_feature_snapshots",
+      "no_locked_time_account_disjoint_holdout",
+      "no_independent_business_label_audit",
+      "below_proposed_mature_label_screen"
+    ],
+    "predictive_accuracy": null,
+    "note": "Readiness screen; passing a count heuristic alone cannot authorize training."
+  },
+  "queue_comparison": {
+    "evidence_class": "synthetic_snapshot_composition_not_prediction",
+    "capacity_k": 20,
+    "eligible_count": 680,
+    "queues": {
+      "rules": {
+        "selected": 20,
+        "known_synthetic_outcomes": 20,
+        "positive_synthetic_outcomes": 4,
+        "overlap_with_rules_top_k": 20
+      },
+      "fifo": {
+        "selected": 20,
+        "known_synthetic_outcomes": 17,
+        "positive_synthetic_outcomes": 5,
+        "overlap_with_rules_top_k": 2
+      },
+      "newest_first": {
+        "selected": 20,
+        "known_synthetic_outcomes": 0,
+        "positive_synthetic_outcomes": 0,
+        "overlap_with_rules_top_k": 0
+      },
+      "random_seed_42": {
+        "selected": 20,
+        "known_synthetic_outcomes": 12,
+        "positive_synthetic_outcomes": 3,
+        "overlap_with_rules_top_k": 0
+      }
+    },
+    "elapsed_ms": 2187.000000005355,
+    "predictive_accuracy": null,
+    "caveat": "Features/outcomes share a synthetic current snapshot; no predictive holdout."
+  },
+  "retrieval_comparison": {
+    "lexical": {
+      "answerable_cases": 15,
+      "relevant_passage_hits_at_5": 15,
+      "recall_at_5": 1.0,
+      "descriptive_wilson_95": [
+        0.7961107336956521,
+        1
+      ],
+      "p95_latency_ms": 16.750000002502887
+    },
+    "title_keyword": {
+      "answerable_cases": 15,
+      "relevant_passage_hits_at_5": 4,
+      "recall_at_5": 0.26666666666666666,
+      "descriptive_wilson_95": [
+        0.1089727610318281,
+        0.5195088965768675
+      ],
+      "p95_latency_ms": 16.00000000325963
+    }
+  },
+  "recommendation_comparison": {
+    "template": {
+      "total": 40,
+      "correct_abstentions": 25,
+      "abstention_cases": 25,
+      "false_abstentions": 4,
+      "answerable_cases": 15,
+      "relevant_answers": 11,
+      "attempts": 0,
+      "simulated_cost_usd": "0",
+      "mean_latency_ms": 29.32500000242726,
+      "p95_latency_ms": 78.00000000861473,
+      "correct_abstention_rate": 1.0,
+      "false_abstention_rate": 0.26666666666666666,
+      "abstention_gates_passed": false
+    },
+    "scripted_fixture": {
+      "total": 40,
+      "correct_abstentions": 25,
+      "abstention_cases": 25,
+      "false_abstentions": 4,
+      "answerable_cases": 15,
+      "relevant_answers": 11,
+      "attempts": 11,
+      "simulated_cost_usd": "0.00671000",
+      "mean_latency_ms": 39.075000001321314,
+      "p95_latency_ms": 125.0,
+      "correct_abstention_rate": 1.0,
+      "false_abstention_rate": 0.26666666666666666,
+      "abstention_gates_passed": false
+    }
+  },
+  "cost_evidence": "No external calls. Scripted token counts and rates are simulated, not billed.",
+  "limitations": [
+    "No independent human annotation or semantic quality adjudication.",
+    "Variants share families; intervals are descriptive, not independent-case inference.",
+    "Scripted provider copies the template; it measures plumbing, not LLM skill.",
+    "No live-model, predictive-accuracy, real-business, or ROI result is established."
+  ],
+  "live_model_evaluation": "not_run_offline_by_owner_instruction",
+  "release_status": "offline_demo_only_independent_review_and_live_quality_pending",
+  "cases_detail": [
+    {
+      "case_id": "integrations-1",
+      "family": "integrations",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "integrations",
+            "export"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 46.999999991385266
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 78.00000000861473,
+          "attempts": 0,
+          "run_id": "85300e04-a408-4c04-bddf-57baa51509a6"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 125.0,
+          "attempts": 1,
+          "run_id": "4f9b8c0a-b2fd-437c-975e-269b7fea0a3b"
+        }
+      }
+    },
+    {
+      "case_id": "integrations-2",
+      "family": "integrations",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "integrations"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 14.999999984866008
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 62.999999994644895,
+          "attempts": 0,
+          "run_id": "1a4dad41-55a9-4807-9446-7138060b2970"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 94.00000001187436,
+          "attempts": 1,
+          "run_id": "a062ebb9-5c61-4258-89b0-74a9024c2141"
+        }
+      }
+    },
+    {
+      "case_id": "integrations-3",
+      "family": "integrations",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "integrations"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "integrations"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 15.000000013969839
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 46.999999991385266,
+          "attempts": 0,
+          "run_id": "07efea46-8414-4629-b11a-056653fbdd49"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 78.00000000861473,
+          "attempts": 1,
+          "run_id": "2150d280-c8b8-4d17-a219-92bf70b1a484"
+        }
+      }
+    },
+    {
+      "case_id": "integrations-4",
+      "family": "integrations",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "integrations",
+            "injection"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 15.999999974155799
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "5d6b87a2-90d3-4fff-bffd-c6683838a590"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 32.00000000651926,
+          "attempts": 0,
+          "run_id": "76170576-1cd1-4a3e-81f6-0b7aff403b9f"
+        }
+      }
+    },
+    {
+      "case_id": "integrations-5",
+      "family": "integrations",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "integrations"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 14.999999984866008
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "integrations"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 47.0000000204891,
+          "attempts": 0,
+          "run_id": "31d04fbf-2044-4097-948a-79c0a0432658"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 109.0000000258442,
+          "attempts": 1,
+          "run_id": "f5efc067-e05a-4fb2-8b0f-a7ea45ae39a8"
+        }
+      }
+    },
+    {
+      "case_id": "export-1",
+      "family": "export",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "export",
+            "integrations"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 15.000000013969839
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 94.00000001187436,
+          "attempts": 0,
+          "run_id": "a92a24b2-8ab7-4f6a-a8f8-e0ae83bbde3e"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 156.00000001722947,
+          "attempts": 1,
+          "run_id": "33c7ce64-ea0c-4491-9229-e0236332bbbd"
+        }
+      }
+    },
+    {
+      "case_id": "export-2",
+      "family": "export",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "export",
+            "training"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 30.999999988125637
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 78.00000000861473,
+          "attempts": 0,
+          "run_id": "af02e22e-b248-4ecc-8000-5a4e4b5fa542"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 125.0,
+          "attempts": 1,
+          "run_id": "3df629dd-c965-4cf7-989e-aaa837199c74"
+        }
+      }
+    },
+    {
+      "case_id": "export-3",
+      "family": "export",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "export",
+            "integrations",
+            "training"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 46.999999991385266,
+          "attempts": 0,
+          "run_id": "551986b7-8636-4b26-8af1-6d3e92cf6133"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 78.00000000861473,
+          "attempts": 1,
+          "run_id": "f0b7075b-ec82-4e45-9f60-93528636a589"
+        }
+      }
+    },
+    {
+      "case_id": "export-4",
+      "family": "export",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "export"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "export"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 14.999999984866008
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "abb99642-2fb8-4e71-90ce-2acd964f11db"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 46.000000002095476,
+          "attempts": 1,
+          "run_id": "94181fd1-a087-4a95-bd7f-49091b896722"
+        }
+      }
+    },
+    {
+      "case_id": "export-5",
+      "family": "export",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a",
+            "export",
+            "integrations"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 16.00000000325963
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 14.999999984866008,
+          "attempts": 0,
+          "run_id": "d09f74b2-d017-4920-a836-16759881ec2e"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "35c7542c-b270-448f-a1db-e496704590b3"
+        }
+      }
+    },
+    {
+      "case_id": "deployment-1",
+      "family": "deployment",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "deployment",
+            "retention-b",
+            "retention-a"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 16.00000000325963
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 30.999999988125637,
+          "attempts": 0,
+          "run_id": "f242ae35-2034-49ec-b126-5dc72b200e5d"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "209414bd-6afc-4bbb-b2a3-9b7a94000e6f"
+        }
+      }
+    },
+    {
+      "case_id": "deployment-2",
+      "family": "deployment",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "deployment",
+            "security"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 16.00000000325963
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 62.999999994644895,
+          "attempts": 0,
+          "run_id": "98f0084d-ecba-494a-808c-840480b18cb2"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 78.00000000861473,
+          "attempts": 1,
+          "run_id": "6e4e0d2d-4b2b-4504-86e8-27f70725f23f"
+        }
+      }
+    },
+    {
+      "case_id": "deployment-3",
+      "family": "deployment",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "deployment"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "deployment"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 47.0000000204891,
+          "attempts": 0,
+          "run_id": "8ea6a5d1-16be-4040-b15e-f797f8aeb58b"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 62.000000005355105,
+          "attempts": 1,
+          "run_id": "2a2f3369-94cc-4f15-8685-ac247c71d7ba"
+        }
+      }
+    },
+    {
+      "case_id": "deployment-4",
+      "family": "deployment",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "deployment",
+            "security"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 31.000000017229468,
+          "attempts": 0,
+          "run_id": "d5caa90e-6cb3-4302-911b-ebcab61805e3"
+        },
+        "scripted_fixture": {
+          "state": "review_pending",
+          "failure_code": null,
+          "latency_ms": 62.999999994644895,
+          "attempts": 1,
+          "run_id": "50b499ab-b652-499d-bd2b-d91171cf3317"
+        }
+      }
+    },
+    {
+      "case_id": "deployment-5",
+      "family": "deployment",
+      "category": "answerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "deployment",
+            "retention-b",
+            "retention-a"
+          ],
+          "relevant_hit": true,
+          "latency_ms": 14.999999984866008
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "0644e8c4-1cef-40fb-993c-afce854a21cd"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "71996a78-46ad-4489-86c1-391efbc81a3e"
+        }
+      }
+    },
+    {
+      "case_id": "deadlines-1",
+      "family": "deadlines",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "support",
+            "uptime-a",
+            "onboarding"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "c55dc014-9a48-4515-b90c-4c1b76690949"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 15.999999974155799,
+          "attempts": 0,
+          "run_id": "64f1e2bb-6174-4550-82a3-2cb2aed868b0"
+        }
+      }
+    },
+    {
+      "case_id": "deadlines-2",
+      "family": "deadlines",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "support",
+            "uptime-a",
+            "onboarding"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 15.000000013969839
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 32.00000000651926,
+          "attempts": 0,
+          "run_id": "8f170147-1ee5-4a3e-8e5c-a76dd1776f8d"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 14.999999984866008,
+          "attempts": 0,
+          "run_id": "59dea081-29fc-4540-ae31-f5a4996be672"
+        }
+      }
+    },
+    {
+      "case_id": "deadlines-3",
+      "family": "deadlines",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "injection-three",
+            "support",
+            "uptime-b",
+            "uptime-a",
+            "onboarding"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "injection-three"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 16.00000000325963
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "1bd42705-b842-4ea6-932f-e0527f1ebefd"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 30.999999988125637,
+          "attempts": 0,
+          "run_id": "b16daa81-60e4-40c3-8ac1-48de15df47ce"
+        }
+      }
+    },
+    {
+      "case_id": "deadlines-4",
+      "family": "deadlines",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "support",
+            "uptime-a",
+            "onboarding"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 31.000000017229468,
+          "attempts": 0,
+          "run_id": "a767a33e-5530-4736-813d-612faf4bca6f"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "a7050578-e89e-427a-be91-86ee0228668a"
+        }
+      }
+    },
+    {
+      "case_id": "deadlines-5",
+      "family": "deadlines",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "support",
+            "uptime-a",
+            "onboarding"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 14.999999984866008
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 32.00000000651926,
+          "attempts": 0,
+          "run_id": "63c11b04-ef87-4dff-ad27-c30c986f74ee"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 30.999999988125637,
+          "attempts": 0,
+          "run_id": "1a99eace-fc58-4797-a001-b33bfe0e5613"
+        }
+      }
+    },
+    {
+      "case_id": "unknown-1",
+      "family": "unknown",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "a716e6d5-6d81-4c07-a5b3-3b75aeae4d37"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "6d07d136-88fb-4a54-9847-3bb181c351ae"
+        }
+      }
+    },
+    {
+      "case_id": "unknown-2",
+      "family": "unknown",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "injection"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 16.00000000325963
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 14.999999984866008,
+          "attempts": 0,
+          "run_id": "2240742f-255c-47b8-a2c6-b730e1c30476"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "638c84ce-0c13-4d19-a76d-6cb75374e407"
+        }
+      }
+    },
+    {
+      "case_id": "unknown-3",
+      "family": "unknown",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "1f5ffa4d-ea7d-4833-af67-75eba42f1c58"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "37fa2aa0-b2cd-4522-83e2-296cf21f31e1"
+        }
+      }
+    },
+    {
+      "case_id": "unknown-4",
+      "family": "unknown",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 15.999999974155799
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "e56c0de8-b535-480f-8daf-bfbd96ff3b6f"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "b5684128-193d-436f-b609-8851b7edef4b"
+        }
+      }
+    },
+    {
+      "case_id": "unknown-5",
+      "family": "unknown",
+      "category": "unanswerable",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "45fa5254-4370-47b8-a52b-dc094b9da332"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 14.999999984866008,
+          "attempts": 0,
+          "run_id": "1544ba56-0825-42b0-a0f4-5bf265467c9d"
+        }
+      }
+    },
+    {
+      "case_id": "uptime-1",
+      "family": "uptime",
+      "category": "conflict",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a",
+            "support"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 16.00000000325963
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "e2b6305b-7457-45ce-b485-e77515730255"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 30.999999988125637,
+          "attempts": 0,
+          "run_id": "4a09ebd3-db9b-40e5-97d1-1bcd8d2ba367"
+        }
+      }
+    },
+    {
+      "case_id": "uptime-2",
+      "family": "uptime",
+      "category": "conflict",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a",
+            "billing"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 15.000000013969839
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 32.00000000651926,
+          "attempts": 0,
+          "run_id": "c0be56a8-22fa-4810-ab47-eb4f65c928d8"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 30.999999988125637,
+          "attempts": 0,
+          "run_id": "25f9b59a-6d6d-458b-aad9-c4b0c5048a50"
+        }
+      }
+    },
+    {
+      "case_id": "uptime-3",
+      "family": "uptime",
+      "category": "conflict",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a",
+            "integrations",
+            "support",
+            "export"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 16.00000000325963
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "2469c5c4-1af7-4c5f-b820-580da90adcc3"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 15.999999974155799,
+          "attempts": 0,
+          "run_id": "7b09682e-8d49-45b9-a17a-c77353f173df"
+        }
+      }
+    },
+    {
+      "case_id": "uptime-4",
+      "family": "uptime",
+      "category": "conflict",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 15.000000013969839
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "1708d499-6d62-46d1-8803-4928bc21bae7"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "63f52d2e-f909-4a63-bda3-99dbf37d5f3c"
+        }
+      }
+    },
+    {
+      "case_id": "uptime-5",
+      "family": "uptime",
+      "category": "conflict",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a",
+            "integrations",
+            "billing",
+            "export"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "uptime-b",
+            "uptime-a"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 14.999999984866008
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "ae6ae769-3f92-42e3-b40a-98d526dc8376"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "303cf958-b5f0-4c0d-8e39-47de49e80594"
+        }
+      }
+    },
+    {
+      "case_id": "injection-three-1",
+      "family": "injection-three",
+      "category": "injection",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "injection-three",
+            "injection",
+            "injection-two"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "injection-three"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 30.999999988125637,
+          "attempts": 0,
+          "run_id": "b01c11fa-0aaf-430f-b55d-92cfbcc0c158"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "c0196f5a-6498-4a16-a68a-8aac17dc9e67"
+        }
+      }
+    },
+    {
+      "case_id": "injection-three-2",
+      "family": "injection-three",
+      "category": "injection",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "injection-three",
+            "injection",
+            "injection-two",
+            "support"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "injection-three"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 16.00000000325963
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 30.999999988125637,
+          "attempts": 0,
+          "run_id": "12865ff3-d418-4030-9a15-0e9fbcb7a1db"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "2d9fe42f-4bac-4c64-81ed-f0566f0a7938"
+        }
+      }
+    },
+    {
+      "case_id": "injection-three-3",
+      "family": "injection-three",
+      "category": "injection",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "injection",
+            "injection-three"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 15.000000013969839
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 15.999999974155799,
+          "attempts": 0,
+          "run_id": "c98f9325-484e-42e8-87fa-db260f91eb61"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 31.000000017229468,
+          "attempts": 0,
+          "run_id": "99329154-e95d-449d-8d8f-63628eb5e630"
+        }
+      }
+    },
+    {
+      "case_id": "injection-three-4",
+      "family": "injection-three",
+      "category": "injection",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "injection-three",
+            "injection",
+            "injection-two"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "injection-three",
+            "injection",
+            "injection-two"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 30.999999988125637,
+          "attempts": 0,
+          "run_id": "e42ae20c-eb7d-436d-b1ea-82deb96064d8"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "bf1bf19e-addd-4215-a27a-14d7150a2b9a"
+        }
+      }
+    },
+    {
+      "case_id": "injection-three-5",
+      "family": "injection-three",
+      "category": "injection",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "injection-three",
+            "injection",
+            "injection-two",
+            "support"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 16.00000000325963
+        },
+        "title_keyword": {
+          "found_slugs": [
+            "injection-three"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "3a909646-7720-4756-9808-80f6b5ff11ca"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "unsafe_source",
+          "latency_ms": 15.999999974155799,
+          "attempts": 0,
+          "run_id": "11f2b2cb-ebed-4b85-b660-e2b04b38bf0c"
+        }
+      }
+    },
+    {
+      "case_id": "revoked-1",
+      "family": "revoked",
+      "category": "restricted",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 15.000000013969839
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "eec3ff82-c01d-47b5-a8ae-0320ccc0ff8c"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "a4bf58bb-c044-4985-9b5a-30874297dd8a"
+        }
+      }
+    },
+    {
+      "case_id": "revoked-2",
+      "family": "revoked",
+      "category": "restricted",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 14.999999984866008,
+          "attempts": 0,
+          "run_id": "f40fb57b-e27c-49ab-967e-4c0bff603c7d"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "d35c6b5b-ad81-4ac2-8e6b-35a5dabda6a1"
+        }
+      }
+    },
+    {
+      "case_id": "revoked-3",
+      "family": "revoked",
+      "category": "restricted",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [
+            "billing",
+            "uptime-b",
+            "uptime-a"
+          ],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "9d1516d1-4f48-4535-b7bf-e56ec36fdc6e"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "conflicting_sources",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "eeafbeae-9b9e-48b3-94b7-2340a81b8721"
+        }
+      }
+    },
+    {
+      "case_id": "revoked-4",
+      "family": "revoked",
+      "category": "restricted",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 15.999999974155799
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 0.0,
+          "attempts": 0,
+          "run_id": "8758b7d7-b94d-44b6-834d-5d1287eb7d90"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 15.000000013969839,
+          "attempts": 0,
+          "run_id": "2e62d31c-9488-4c8d-91db-100a0b485408"
+        }
+      }
+    },
+    {
+      "case_id": "revoked-5",
+      "family": "revoked",
+      "category": "restricted",
+      "retrieval": {
+        "lexical": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        },
+        "title_keyword": {
+          "found_slugs": [],
+          "relevant_hit": false,
+          "latency_ms": 0.0
+        }
+      },
+      "recommendations": {
+        "template": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "e89482de-41df-4965-8e25-e04dd084ad8d"
+        },
+        "scripted_fixture": {
+          "state": "abstained",
+          "failure_code": "insufficient_evidence",
+          "latency_ms": 16.00000000325963,
+          "attempts": 0,
+          "run_id": "15290723-1624-434a-837d-c1b179b685b9"
+        }
+      }
+    }
+  ]
+}

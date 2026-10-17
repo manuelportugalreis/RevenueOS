@@ -1,0 +1,66 @@
+{
+  "fabricated_citation": {
+    "run_id": "620ac94f-c8ef-419b-914c-4a2b672d488d",
+    "state": "failed",
+    "failure_code": "schema_evidence_or_policy_validation_failed",
+    "recommendation": null,
+    "human_review_required": true,
+    "approved": false,
+    "delivery_available": false,
+    "attempts": [
+      {
+        "attempt": 1,
+        "provider_kind": "scripted_fixture",
+        "model": "scripted-fixture-v1",
+        "state": "accounted",
+        "input_tokens": 500,
+        "output_tokens": 180,
+        "estimated_cost_usd": "0.00061000",
+        "reserved_usd": "0.00536400",
+        "cost_basis": "fixture_simulated",
+        "outcome": "schema_evidence_or_policy_validation_failed",
+        "latency_ms": "0.000",
+        "price_version": "SIMULATED-failure-demo-v1"
+      },
+      {
+        "attempt": 2,
+        "provider_kind": "scripted_fixture",
+        "model": "scripted-fixture-v1",
+        "state": "accounted",
+        "input_tokens": 500,
+        "output_tokens": 180,
+        "estimated_cost_usd": "0.00061000",
+        "reserved_usd": "0.00536400",
+        "cost_basis": "fixture_simulated",
+        "outcome": "schema_evidence_or_policy_validation_failed",
+        "latency_ms": "0.000",
+        "price_version": "SIMULATED-failure-demo-v1"
+      }
+    ]
+  },
+  "timeout_unknown_usage": {
+    "run_id": "be8098be-a389-4ac9-bfc2-8984ee247e13",
+    "state": "failed",
+    "failure_code": "usage_unknown_reservation_retained",
+    "recommendation": null,
+    "human_review_required": true,
+    "approved": false,
+    "delivery_available": false,
+    "attempts": [
+      {
+        "attempt": 1,
+        "provider_kind": "scripted_fixture",
+        "model": "scripted-fixture-v1",
+        "state": "usage_unknown",
+        "input_tokens": null,
+        "output_tokens": null,
+        "estimated_cost_usd": null,
+        "reserved_usd": "0.00536400",
+        "cost_basis": "unknown_reservation_retained",
+        "outcome": "usage_unknown_reservation_retained",
+        "latency_ms": "0.000",
+        "price_version": "SIMULATED-failure-demo-v1"
+      }
+    ]
+  }
+}

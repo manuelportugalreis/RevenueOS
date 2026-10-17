@@ -1,0 +1,6 @@
+data_mode,external_id,source_updated_at,account_external_id,stage,amount,currency,created_at,closed_at
+synthetic,O1,2026-09-30T00:00:00Z,A1,won,1000.00,USD,2026-08-02T00:00:00Z,2026-09-10T00:00:00Z
+synthetic,O2,2026-09-30T00:00:00Z,A1,lost,2000.00,USD,2026-08-02T00:00:00Z,2026-09-15T00:00:00Z
+synthetic,O3,2026-09-30T00:00:00Z,A1,proposal,3000.10,USD,2026-08-02T00:00:00Z,
+synthetic,O4,2026-09-30T00:00:00Z,A1,demo,4000.20,EUR,2026-08-02T00:00:00Z,
+synthetic,O_BAD,2026-09-30T00:00:00Z,A1,won,-1,USD,2026-08-02T00:00:00Z,

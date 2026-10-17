@@ -1,0 +1,22 @@
+{
+  "model_training_allowed": false,
+  "decision": "retain_rules_baseline",
+  "counts": {
+    "data_mode": "synthetic",
+    "snapshots": 1,
+    "leads": 1000,
+    "recorded_outcomes": 941,
+    "complete_outcomes": 703,
+    "mature_dated_positives": 127,
+    "updated_after_creation": 1000
+  },
+  "reasons": [
+    "synthetic_labels_are_not_business_outcomes",
+    "no_verified_pre_outcome_feature_snapshots",
+    "no_locked_time_account_disjoint_holdout",
+    "no_independent_business_label_audit",
+    "below_proposed_mature_label_screen"
+  ],
+  "predictive_accuracy": null,
+  "note": "Readiness screen; passing a count heuristic alone cannot authorize training."
+}

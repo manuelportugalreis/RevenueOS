@@ -1,0 +1,22 @@
+# Use an independently provisioned PostgreSQL instance and pre-run Alembic migrations.
+services:
+  app:
+    build: ..
+    env_file: ../.env
+    expose: ["8000"]
+    restart: unless-stopped
+    read_only: true
+    tmpfs: ["/tmp"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+  edge:
+    image: caddy:2.10
+    ports: ["80:80", "443:443"]
+    environment:
+      REVENUEOS_HOST: ${REVENUEOS_HOST:?Set REVENUEOS_HOST}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on: [app]
+volumes:
+  caddy_data:

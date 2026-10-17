@@ -1,0 +1,165 @@
+{
+  "evidence_class": "local_synthetic_performance_observation",
+  "ranking_leads": 1000,
+  "ranking": {
+    "single_lead_reference": {
+      "latencies_ms": [
+        3823.9215000066906,
+        3805.0156999961473,
+        3846.645300014643
+      ],
+      "query_counts_including_scope": [
+        3001,
+        3001,
+        3001
+      ],
+      "median_ms": 3823.9215000066906
+    },
+    "batched_queue": {
+      "latencies_ms": [
+        178.35499998182058,
+        228.84110000450164,
+        190.29919998138212
+      ],
+      "query_counts_including_scope": [
+        4,
+        4,
+        4
+      ],
+      "median_ms": 190.29919998138212
+    }
+  },
+  "all_score_explanations_equal": true,
+  "api_requests": [
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 91.50139999110252
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 439.29199999547563
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 564.9368000158574
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 605.5989000014961
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 619.484900002135
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 71.07609999366105
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 76.0213999892585
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 59.54749998636544
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 65.34160001319833
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 255.73139998596162
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 64.10249997861683
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 81.7215999995824
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 130.00569998985156
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 125.1209000183735
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 114.81759999878705
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 127.89279999560677
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 129.90100000752136
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 129.6738999953959
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 142.25150001584552
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 149.34480001102202
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 137.64070000615902
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 141.29259999026544
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 114.45999998250045
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 94.46789999492466
+    },
+    {
+      "status": 200,
+      "correct_golden_kpi": true,
+      "elapsed_ms": 87.0320999820251
+    }
+  ],
+  "concurrent_clients": 5,
+  "api_fixture_leads": 8,
+  "p95_http_ms": 597.4664800043682,
+  "failures": 0,
+  "limitations": "Local synthetic environment; reference excludes queue sorting; three samples, no production SLO or real-user study."
+}

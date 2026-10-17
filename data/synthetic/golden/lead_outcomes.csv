@@ -1,0 +1,6 @@
+data_mode,lead_external_id,definition_version,qualified_at,observation_complete,observed_through
+synthetic,L1,qualified_30d_v1,2026-08-15T00:00:00Z,true,2026-09-30T00:00:00Z
+synthetic,L2,qualified_30d_v1,,true,2026-09-30T00:00:00Z
+synthetic,L3,qualified_30d_v1,,false,2026-09-30T00:00:00Z
+synthetic,L4,qualified_30d_v1,,false,2026-09-30T00:00:00Z
+synthetic,L7,qualified_30d_v1,,true,2026-09-30T00:00:00Z

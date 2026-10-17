@@ -1,0 +1,5 @@
+data_mode,external_id,source_updated_at,name,domain,industry,employee_band
+synthetic,A1,2026-09-30T00:00:00Z,SYNTHETIC Example One,one.example,Software,11-50
+synthetic,A2,2026-09-30T00:00:00Z,SYNTHETIC Example Two,two.example,,
+synthetic,A_CONFLICT,2026-09-30T00:00:00Z,SYNTHETIC Conflict 1,one.example,Software,11-50
+synthetic,A_CONFLICT,2026-09-30T00:00:00Z,SYNTHETIC Conflict 2,one.example,Software,11-50

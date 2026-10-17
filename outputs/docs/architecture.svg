@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+<title id="title">RevenueOS implemented architecture</title><desc id="desc">Same-origin React dashboard, authenticated FastAPI modular monolith, PostgreSQL, bounded scoped reads, exact citations, immutable draft review and offline evaluation. Google and live model integration require further live verification. No delivery connector exists.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#527375"/></marker></defs>
+<rect width="1200" height="740" fill="#f3f6f6"/>
+<g font-family="Arial, sans-serif" fill="#183039"><text x="32" y="34" font-size="24" font-weight="700">RevenueOS · implemented architecture</text><text x="32" y="58" font-size="14">Synthetic, offline demonstration · one application and PostgreSQL · human decisions remain explicit</text></g>
+<g fill="none" stroke="#527375" stroke-width="2" marker-end="url(#arrow)">
+<path d="M285 130H345"/><path d="M655 130H795"/><path d="M500 240V185" stroke-dasharray="6 4"/>
+<path d="M400 180V225H160V260"/><path d="M500 180V385"/>
+<path d="M655 430H740V345H795"/><path d="M960 390V435"/><path d="M960 525V575"/>
+<path d="M1135 620H1170V130H1135"/><path d="M1135 345H1170"/>
+<path d="M285 530H345" stroke-dasharray="6 4"/>
+</g>
+<g font-family="Arial, sans-serif" fill="#183039">
+<rect x="30" y="85" width="255" height="95" rx="9" fill="white" stroke="#bdcfcb"/><text x="48" y="115" font-size="18" font-weight="700">React + TypeScript</text><text x="48" y="140" font-size="14">Executive dashboard / source view</text><text x="48" y="162" font-size="14">Same-origin API, no secrets</text>
+<rect x="345" y="85" width="310" height="95" rx="9" fill="#dbeee7" stroke="#11665c"/><text x="363" y="115" font-size="18" font-weight="700">FastAPI identity boundary</text><text x="363" y="140" font-size="14">Opaque DB sessions / membership</text><text x="363" y="162" font-size="14">Origin + CSRF / server-owned scope</text>
+<rect x="795" y="85" width="340" height="95" rx="9" fill="#142f36"/><text x="813" y="115" font-size="18" font-weight="700" fill="white">PostgreSQL</text><text x="813" y="140" font-size="14" fill="#dcebe8">CRM snapshots / knowledge / run ledger</text><text x="813" y="162" font-size="14" fill="#dcebe8">Approvals / sessions / redacted audit</text>
+<rect x="345" y="240" width="310" height="85" rx="9" fill="#fff0e8" stroke="#b77742" stroke-dasharray="6 4"/><text x="363" y="268" font-size="18" font-weight="700">Google Workspace OIDC</text><text x="363" y="293" font-size="14">Signed offline tests; live tenant pending</text><text x="363" y="313" font-size="13">Explicit subject + hosted-domain allowlist</text>
+<rect x="30" y="260" width="255" height="105" rx="9" fill="white" stroke="#bdcfcb"/><text x="48" y="291" font-size="18" font-weight="700">Trusted data services</text><text x="48" y="316" font-size="14">CSV validation / immutable snapshots</text><text x="48" y="338" font-size="14">SQL metrics / explained rules</text>
+<rect x="345" y="385" width="310" height="95" rx="9" fill="#dbeee7" stroke="#11665c"/><text x="363" y="415" font-size="18" font-weight="700">Bounded read workflow</text><text x="363" y="440" font-size="14">Four tools / strict schemas / read only</text><text x="363" y="462" font-size="14">Two proposal attempts / audit + budget</text>
+<rect x="795" y="300" width="340" height="90" rx="9" fill="white" stroke="#bdcfcb"/><text x="813" y="330" font-size="18" font-weight="700">Approved lexical knowledge</text><text x="813" y="355" font-size="14">Scope / version / validity / revocation</text><text x="813" y="377" font-size="14">Exact quotations and source locators</text>
+<rect x="795" y="435" width="340" height="90" rx="9" fill="white" stroke="#bdcfcb"/><text x="813" y="465" font-size="18" font-weight="700">Validated recommendation</text><text x="813" y="490" font-size="14">Offline template; live model unmeasured</text><text x="813" y="512" font-size="14">Immutable recipient / text / evidence hash</text>
+<rect x="795" y="575" width="340" height="90" rx="9" fill="#dbeee7" stroke="#11665c"/><text x="813" y="605" font-size="18" font-weight="700">Explicit human decision</text><text x="813" y="630" font-size="14">Assigned reviewer / exact version / expiry</text><text x="813" y="652" font-size="14">No web send endpoint or delivery adapter</text>
+<rect x="30" y="480" width="255" height="120" rx="9" fill="white" stroke="#bdcfcb"/><text x="48" y="510" font-size="18" font-weight="700">Paired synthetic evaluation</text><text x="48" y="535" font-size="14">Title/template vs bounded lexical</text><text x="48" y="557" font-size="14">Raw attempts / hashes / failure cases</text><text x="48" y="579" font-size="14">Descriptive family bootstrap</text>
+<text x="32" y="694" font-size="14" font-weight="700">Evidence boundary:</text><text x="164" y="694" font-size="14">Synthetic computation ≠ human time saved ≠ real retrospective validation ≠ client pilot outcomes</text>
+<text x="32" y="720" font-size="13">Monitoring: readiness, redacted request IDs/timing and authenticated process counters. Production roles, restore and load verification remain open.</text>
+</g></svg>

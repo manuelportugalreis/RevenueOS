@@ -1,0 +1,82 @@
+[
+  {
+    "name": "get_lead_context",
+    "description": "Read-only; scope is supplied by server policy.",
+    "parameters": {
+      "additionalProperties": false,
+      "properties": {},
+      "title": "Arguments",
+      "type": "object"
+    },
+    "side_effects": false
+  },
+  {
+    "name": "get_priority_explanation",
+    "description": "Read-only; scope is supplied by server policy.",
+    "parameters": {
+      "additionalProperties": false,
+      "properties": {},
+      "title": "Arguments",
+      "type": "object"
+    },
+    "side_effects": false
+  },
+  {
+    "name": "search_approved_knowledge",
+    "description": "Read-only; scope is supplied by server policy.",
+    "parameters": {
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Query",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "title": "SearchArguments",
+      "type": "object"
+    },
+    "side_effects": false
+  },
+  {
+    "name": "get_metric",
+    "description": "Read-only; scope is supplied by server policy.",
+    "parameters": {
+      "additionalProperties": false,
+      "properties": {
+        "metric": {
+          "enum": [
+            "inbound_leads",
+            "qualification_rate",
+            "win_rate",
+            "open_pipeline_by_currency"
+          ],
+          "title": "Metric",
+          "type": "string"
+        },
+        "start": {
+          "format": "date-time",
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "format": "date-time",
+          "title": "End",
+          "type": "string"
+        }
+      },
+      "required": [
+        "metric",
+        "start",
+        "end"
+      ],
+      "title": "MetricArguments",
+      "type": "object"
+    },
+    "side_effects": false
+  }
+]

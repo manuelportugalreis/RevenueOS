@@ -1,0 +1,4 @@
+data_mode,opportunity_external_id,lead_external_id
+synthetic,O1,L1
+synthetic,O3,L1
+synthetic,O_BAD,L2

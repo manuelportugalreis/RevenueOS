@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+# Evidence and fixture hashes identify exact bytes across Windows/Linux checkouts.
+data/** -text
+outputs/** -text
+requirements.lock -text
+
+*.png binary
+*.zip binary
