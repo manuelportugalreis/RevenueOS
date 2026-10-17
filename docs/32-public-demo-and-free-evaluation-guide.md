@@ -29,6 +29,8 @@ The first new template-only run passed **17/24** authored tasks: eight relevant 
 
 ## Configure the free API without sharing a key
 
+Annotation caveat: the expected-refusal labels are provisional. Some yes/no questions may admit a valid, grounded negative answer (for example, a passage explicitly denying a guarantee). An extractive completion can therefore disagree with an authored refusal label without being false. The 17/24 result and six inappropriate-completion counts are conditional on this conservative rubric, not adjudicated human error rates. Preserve the original labels/results and resolve such disagreements through blinded independent review; do not silently relabel this run to improve its score.
+
 The owner requires **zero monetary spend**. The optional adapter targets `gemini-2.5-flash-lite` through the official Developer API. At inspection, [Google's pricing page](https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-flash-lite) lists free-tier input/output and separate paid-tier prices. Availability, account eligibility and quotas are not guaranteed. Unpaid-service data may be used to improve Google products; this project transmits approved synthetic material only. Request shape follows [generateContent](https://ai.google.dev/api/generate-content) and its JSON-schema generation settings. Provider schema compliance is not evidence of factual relevance.
 
 1. Create/use a Google AI Studio project on the **Free Tier with no billing attached**. Do not enable billing, upgrade plans or use a paid project for this experiment.

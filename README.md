@@ -8,7 +8,7 @@ RevenueOS is a synthetic, offline portfolio system for B2B SaaS inbound RevOps. 
 
 **[Explore the public interactive replay](https://manuelportugalreis.github.io/RevenueOS/)** — no installation or password. It uses recorded synthetic API results and browser-local simulated decisions; it does not host the authenticated backend or call a model. [Demo and free-model experiment guide](docs/32-public-demo-and-free-evaluation-guide.md).
 
-**New prospective diagnostic:** the unchanged focused template passed **17/24 newly authored tasks**, with six inappropriate completions and one false abstention. This harder set was not used to tune the policy. Actual LLM comparison is pending a configured free-tier credential; independent human review remains unperformed. Previous 99/100 results below describe the earlier exposed fixture set, not these new questions.
+**New prospective diagnostic:** the unchanged focused template passed **17/24 newly authored tasks** under provisional project-authored labels, with six completions marked inappropriate and one false abstention. Some refusal labels may admit grounded negative answers and need independent adjudication. This set was not used to tune the policy. Actual LLM comparison is pending a configured free-tier credential; independent human review remains unperformed. Previous 99/100 results below describe the earlier exposed fixture set, not these new questions.
 
 ![RevenueOS executive dashboard using synthetic data](docs/dashboard-preview.png)
 
