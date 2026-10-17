@@ -434,7 +434,9 @@ def build(root: Path = ROOT) -> None:
     ):
         (root / name).write_text(
             # Preserve the original Windows fixture bytes on every host.
-            json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\r\n"
+            json.dumps(value, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+            newline="\r\n",
         )
     failures = [
         ("fabricated_id", "A model cites an identifier outside the evidence allowlist.", "reject"),
