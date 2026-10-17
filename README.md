@@ -4,9 +4,9 @@
 
 [![Offline checks](https://github.com/manuelportugalreis/RevenueOS/actions/workflows/data-foundation.yml/badge.svg)](https://github.com/manuelportugalreis/RevenueOS/actions/workflows/data-foundation.yml)
 
-RevenueOS is a synthetic, offline portfolio system for B2B SaaS inbound RevOps. It connects validated CRM snapshots, SQL business metrics, explainable priorities, approved sales knowledge and cited drafts in an authenticated executive dashboard. It is an engineering demonstration, not a client deployment.
+RevenueOS is a synthetic portfolio system for B2B SaaS inbound RevOps. It connects validated CRM snapshots, SQL business metrics, explainable priorities, approved sales knowledge and cited drafts in an authenticated executive dashboard. It is an engineering demonstration, not a client deployment.
 
-**[Explore the public interactive replay](https://manuelportugalreis.github.io/RevenueOS/)** — no installation or password. It uses recorded synthetic API results and browser-local simulated decisions; it does not host the authenticated backend or call a model. [Demo and free-model experiment guide](docs/32-public-demo-and-free-evaluation-guide.md).
+**[Explore the public interactive replay](https://manuelportugalreis.com/RevenueOS/)** — no installation or password. It uses recorded synthetic API results and browser-local simulated decisions; it does not host the authenticated backend or call a model. [Demo and free-model experiment guide](docs/32-public-demo-and-free-evaluation-guide.md).
 
 **Actual free-tier model comparison:** on 24 newly authored tasks with provisional project labels, the focused template passed **17/24** and Gemini passed **14/24**. Fourteen real model calls completed; nine outputs were blocked by strict local validation. No uplift was demonstrated, so the template remains the default. Some refusal labels need independent adjudication; no held-out accuracy or client ROI is claimed. [Full live report, tokens and failures](docs/33-live-model-comparison-report.md). Previous 99/100 results below use an older exposed fixture set.
 
@@ -14,7 +14,22 @@ RevenueOS is a synthetic, offline portfolio system for B2B SaaS inbound RevOps. 
 
 [Architecture diagram](docs/22-architecture-current.md) · [Five-minute demo](docs/26-interview-demo.md)
 
-## Observed results and limits
+## Start here
+
+- **Try it:** [public demo](https://manuelportugalreis.com/RevenueOS/) — an explicitly labeled interactive replay; no account required.
+- **Understand it:** [architecture and data flows](docs/22-architecture-current.md) and [five-minute interview walkthrough](docs/26-interview-demo.md).
+- **Assess it:** [actual model comparison](docs/33-live-model-comparison-report.md), including failures, tokens and uncertainty.
+- **Run it:** local setup and verification commands below; no model key is required for the default workflow.
+
+**Status: complete as a portfolio demonstration; business validation remains pending.** All CRM records and scenarios are synthetic. There is no pilot company, measured conversion uplift or realized ROI. The public replay does not expose the authenticated backend or execute external actions.
+
+## Current verification
+
+[Published verification run](https://github.com/manuelportugalreis/RevenueOS/actions/runs/39061200478): **219 Python/PostgreSQL tests and four browser journeys passed**, alongside lint, type checks, frontend builds and the container build. Two additional browser journeys passed against the published demo, including its actual-model evaluation panel. These are regression checks, not evidence of business impact.
+
+The new 24-task experiment used project-authored provisional labels: **17/24 template versus 14/24 Gemini**, with nine model outputs rejected by local validation. No model uplift was demonstrated, so the template remains the default. Independent quality review is pending. The [technical report](docs/33-live-model-comparison-report.md) separates completed model calls, upstream abstentions, validation failures and cost assumptions.
+
+## Historical diagnostics and limits
 
 | Evidence | Result | Interpretation |
 |---|---|---|
@@ -29,7 +44,7 @@ RevenueOS is a synthetic, offline portfolio system for B2B SaaS inbound RevOps. 
 
 The final diagnostic recorded 800 measured attempts plus 16 warm-ups across four arms and two repetitions. Focused direct versus legacy lexical: +14 percentage points, descriptive family-bootstrap interval +5 to +25; the previously exposed test subset interval includes no improvement. Focused direct and bounded had equal task quality; mean software times were 33.7 and 203.6 ms respectively. Tools add permissions/audit, not demonstrated semantic benefit. All arms used templates with zero provider attempts; actual hosting/labor/invoices remain unknown.
 
-Read the [current executed report](docs/29-improvements-verification.md), [design and reproduction guide](docs/28-improvements-guide.md) and [current evidence index](outputs/improvements/RevenueOS-Improvements-Index.md). The original [85/100 versus 66/100 report](docs/23-comparison-report.md) and root portfolio exports remain historical. No fresh hidden holdout, independent human labels, real model quality or client outcomes are claimed.
+Read the [current executed report](docs/29-improvements-verification.md), [design and reproduction guide](docs/28-improvements-guide.md) and [current evidence index](outputs/improvements/RevenueOS-Improvements-Index.md). The original [85/100 versus 66/100 report](docs/23-comparison-report.md) and root portfolio exports remain historical. These historical diagnostics do not establish hidden-test accuracy or client outcomes. The separate live-model experiment above records actual synthetic model behavior with provisional labels.
 
 ## Implemented slice
 
@@ -43,7 +58,7 @@ Read the [current executed report](docs/29-improvements-verification.md), [desig
 - Transactional redacted audit, immutable draft versions and explicit reviewer decisions. **No web send endpoint or external messaging connector.** Operator-only rehearsal records `delivered=false`.
 - Readiness/liveness, redacted request IDs/status/timing, protected process counters, CI and container/TLS deployment configuration.
 
-Local native runtime-role/RLS, isolated restore, idempotency and crash reconciliation are now tested. Live Google enrollment, hosted CI/container execution, real-model quality, production retention, encrypted/off-site recovery and sustained load remain outstanding. The optional free-tier Gemini adapter now has contract tests and a recorded 14-call synthetic execution; nine validation failures and no observed uplift remain disclosed. Historical evaluations were offline; the free-tier experiment now requires a configured key and explicit no-billing attestation. Real data is blocked by the web service. Passing tests does not establish production readiness.
+Local native runtime-role/RLS, isolated restore, idempotency and crash reconciliation are now tested. Live Google enrollment, independently adjudicated model quality, production retention, encrypted/off-site recovery and sustained load remain outstanding. Hosted CI and container builds have passed; these do not establish production readiness. The optional free-tier Gemini adapter now has contract tests and a recorded 14-call synthetic execution; nine validation failures and no observed uplift remain disclosed. Historical evaluations were offline; the free-tier experiment now requires a configured key and explicit no-billing attestation. Real data is blocked by the web service. Passing tests does not establish production readiness.
 
 ## Local dashboard
 
@@ -85,7 +100,7 @@ Without DB configuration integration cases skip; `--require-db` prevents skipped
 npm.cmd run test:e2e --prefix frontend
 ```
 
-Browser decisions use synthetic personas and create no deliveries. CI uses actual PostgreSQL, but remote execution is not claimed. [Verification](docs/20-dashboard-verification.md) records measured results and corrections.
+Browser decisions use synthetic personas and create no deliveries. GitHub Actions runs the suite against PostgreSQL and publishes the replay after successful checks. [Verification](docs/20-dashboard-verification.md) records measured results and corrections.
 
 ## Reproduce the comparison
 
@@ -96,7 +111,7 @@ Import the large seeded synthetic bundle and seed approved knowledge using the [
 ./.venv/Scripts/python scripts/export_portfolio.py
 ```
 
-The commands above reproduce the historical two-arm comparison. For the current four-arm experiment, use `--variant ablation --split all` and a new output directory; see the [current reproduction guide](docs/28-improvements-guide.md). `export_portfolio.py` is the historical exporter; `export_improvements.py` packages the current preserved artifacts. Keep new experiments separate; never overwrite a failed run to present success. Historical source hashes identify the exact prepublication workspace snapshot. Git tags identify published source; no hosted application deployment is implied.
+The commands above reproduce the historical two-arm comparison. For the current four-arm experiment, use `--variant ablation --split all` and a new output directory; see the [current reproduction guide](docs/28-improvements-guide.md). `export_portfolio.py` is the historical exporter; `export_improvements.py` packages the current preserved artifacts. Keep new experiments separate; never overwrite a failed run to present success. Historical source hashes identify the exact prepublication workspace snapshot. Git tags identify historical published source. The public replay is deployed separately from the authenticated application.
 
 The [business scenario inputs](data/evaluation/business-assumptions.json) are simulations with positive, neutral and downside cases; realized ROI remains null. The [empty pilot collection template](data/pilot/task-observations-template.csv) is a future contract, not client observations. A real pilot needs approved data, independently reviewed quality, measured human work and actual cost evidence.
 
@@ -104,4 +119,4 @@ The [business scenario inputs](data/evaluation/business-assumptions.json) are si
 
 Start with the [five-minute demonstration](docs/26-interview-demo.md), [architecture](docs/22-architecture-current.md), [case study](docs/30-presentation-case-study.md), and [measured evidence](docs/29-improvements-verification.md). The repository includes complete source, migrations, reproducible synthetic fixtures, tests, operations instructions and preserved evaluation artifacts. [Release notes](CHANGELOG.md) distinguish implemented behavior from unverified production capabilities. [Security reporting](SECURITY.md) explains how to report a concern without posting credentials or records publicly.
 
-The published portfolio is an offline synthetic demonstration. Running it does not require a model API key. Live model evaluation, an actual Google Workspace tenant and a business pilot remain future validation work.
+The default application and public replay require no model API key. A separate opt-in Free Tier experiment has been executed and documented; actual invoiced cost was not independently observed. An actual Google Workspace tenant, independent human review and a business pilot remain future validation work.
