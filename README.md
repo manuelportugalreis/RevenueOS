@@ -8,7 +8,7 @@ RevenueOS is a synthetic, offline portfolio system for B2B SaaS inbound RevOps. 
 
 **[Explore the public interactive replay](https://manuelportugalreis.github.io/RevenueOS/)** — no installation or password. It uses recorded synthetic API results and browser-local simulated decisions; it does not host the authenticated backend or call a model. [Demo and free-model experiment guide](docs/32-public-demo-and-free-evaluation-guide.md).
 
-**New prospective diagnostic:** the unchanged focused template passed **17/24 newly authored tasks** under provisional project-authored labels, with six completions marked inappropriate and one false abstention. Some refusal labels may admit grounded negative answers and need independent adjudication. This set was not used to tune the policy. Actual LLM comparison is pending a configured free-tier credential; independent human review remains unperformed. Previous 99/100 results below describe the earlier exposed fixture set, not these new questions.
+**Actual free-tier model comparison:** on 24 newly authored tasks with provisional project labels, the focused template passed **17/24** and Gemini passed **14/24**. Fourteen real model calls completed; nine outputs were blocked by strict local validation. No uplift was demonstrated, so the template remains the default. Some refusal labels need independent adjudication; no held-out accuracy or client ROI is claimed. [Full live report, tokens and failures](docs/33-live-model-comparison-report.md). Previous 99/100 results below use an older exposed fixture set.
 
 ![RevenueOS executive dashboard using synthetic data](docs/dashboard-preview.png)
 
@@ -43,7 +43,7 @@ Read the [current executed report](docs/29-improvements-verification.md), [desig
 - Transactional redacted audit, immutable draft versions and explicit reviewer decisions. **No web send endpoint or external messaging connector.** Operator-only rehearsal records `delivered=false`.
 - Readiness/liveness, redacted request IDs/status/timing, protected process counters, CI and container/TLS deployment configuration.
 
-Local native runtime-role/RLS, isolated restore, idempotency and crash reconciliation are now tested. Live Google enrollment, hosted CI/container execution, real-model quality, production retention, encrypted/off-site recovery and sustained load remain outstanding. The optional live-provider adapter has fake-transport contract tests only. Historical evaluations were offline; the free-tier experiment now requires a configured key and explicit no-billing attestation. Real data is blocked by the web service. Passing tests does not establish production readiness.
+Local native runtime-role/RLS, isolated restore, idempotency and crash reconciliation are now tested. Live Google enrollment, hosted CI/container execution, real-model quality, production retention, encrypted/off-site recovery and sustained load remain outstanding. The optional free-tier Gemini adapter now has contract tests and a recorded 14-call synthetic execution; nine validation failures and no observed uplift remain disclosed. Historical evaluations were offline; the free-tier experiment now requires a configured key and explicit no-billing attestation. Real data is blocked by the web service. Passing tests does not establish production readiness.
 
 ## Local dashboard
 

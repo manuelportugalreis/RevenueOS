@@ -20,6 +20,7 @@ The [architecture](22-architecture-current.md) shows the flows. The [implementat
 - Batched scoring used four client SQL statements instead of 3,001 for 1,000 synthetic leads, preserving score explanations.
 - Local isolated backup/restore preserved row fingerprints. Post-restore grants and PUBLIC revokes were reapplied and tested with a non-owner login.
 - Rework and missingness can invalidate an attractive business scenario. All human times are scripted; real participants, measured savings and realized ROI remain absent.
+- A subsequent [actual free-tier LLM comparison](33-live-model-comparison-report.md) completed 14 calls: 14/24 assigned task successes versus 17/24 for the template under provisional labels, with nine local validation failures. The model did not demonstrate uplift, so the template remains the default. This result is not independent model accuracy.
 
 These are recorded local observations. The public repository's Actions run supplies separate hosted CI evidence. Source hashes and raw attempts make the diagnostic inspectable; [the report](29-improvements-verification.md) records uncertainty, failure cases and remaining risks.
 

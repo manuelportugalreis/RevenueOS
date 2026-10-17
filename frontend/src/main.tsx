@@ -8,6 +8,7 @@ import React, {
 import { createRoot } from "react-dom/client";
 import "./style.css";
 import focused from "../../data/dashboard/focused-evaluation.json";
+import prospective from "../../data/dashboard/prospective-evaluation.json";
 
 const SHOWCASE = import.meta.env.MODE === "showcase";
 
@@ -942,7 +943,63 @@ function App() {
               <>
                 <section>
                   <p className="eyebrow">
-                    FOCUSED POLICY V2 · SYNTHETIC DIAGNOSTIC
+                    PROSPECTIVE SYNTHETIC DIAGNOSTIC · REAL MODEL CALLS
+                  </p>
+                  <h2>Live model comparison: no demonstrated uplift</h2>
+                  <table>
+                    <caption>
+                      Assigned task success under provisional project-authored
+                      labels
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>Workflow</th>
+                        <th>Passed</th>
+                        <th>Validation failures</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Focused template</td>
+                        <td>
+                          {prospective.template_successes}/{prospective.tasks}
+                        </td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>{prospective.model}</td>
+                        <td>
+                          {prospective.model_successes}/{prospective.tasks}
+                        </td>
+                        <td>{prospective.model_validation_failures}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    {prospective.transport_calls} actual model calls;{" "}
+                    {prospective.completed_generations} completed generations.
+                    Some refusals happened before inference. Rejected
+                    generations count as failures, not acceptable abstentions.
+                  </p>
+                  <p className="muted">
+                    These new cases and labels are project-authored, not
+                    independent human review or hidden-test accuracy. Some
+                    refusal labels may admit grounded negative answers. Template
+                    remains the default. Human time savings and ROI are
+                    unmeasured.
+                  </p>
+                  <p className="muted">
+                    Recorded Free Tier experiment with operator-confirmed no
+                    billing. Actual invoice unverified. This public replay does
+                    not call the model.
+                  </p>
+                  <p className="hash">
+                    Source SHA-256: {prospective.source_sha256}
+                  </p>
+                </section>
+                <section>
+                  <p className="eyebrow">
+                    HISTORICAL FOCUSED POLICY V2 · PREVIOUSLY EXPOSED CASES
                   </p>
                   <h2>Independent quality review pending</h2>
                   <p>

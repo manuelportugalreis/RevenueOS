@@ -9,7 +9,7 @@ Audience: technical recruiter, AI product leader, consulting partner or engineer
 | 1:05–1:45 | Lead priorities → explain the known eligible L1 reference | “These are versioned attention points, not conversion probabilities. I kept rules because real mature labels and scoring-time history are unavailable.” |
 | 1:45–2:25 | Query `configuration checklist`, prepare cited recommendation, open source | “Four allowlisted reads run under server-owned scope. The offline template quotes an approved passage with exact version/offsets. No model has database or network authority.” |
 | 2:25–3:05 | Reviewer session → inspect → approve exact version | “The reviewer inspects recipient, message, sources, version, hash and expiry. Approval records a decision; the web app cannot send anything. Edits require a new approval.” |
-| 3:05–3:50 | Current evaluation tab and four-arm report | “The focused policy passes 99 of 100 authored tasks, versus 85 for legacy lexical retrieval and 66 for title retrieval. The direct and bounded versions have equal quality; tools add audit and overhead. All four use templates, and the cases were previously exposed.” |
+| 3:05–3:50 | Current evaluation tab and four-arm report | “The older template diagnostic passed 99/100 on exposed cases. New questions scored 17/24 for the template and 14/24 for an actual free-tier Gemini workflow. Nine generated outputs failed validation. I retained the template because the model did not demonstrate uplift.” |
 | 3:50–4:25 | Failure query `ignore previous instructions`, or preserved `deadlines-3` case | “The injected fixture is rejected, but one grounded yet inappropriate completion remains. The current exposed test split passes 39 of 40 tasks. These are diagnostics, not general model accuracy or independent validation.” |
 | 4:25–5:00 | Architecture, scripted business downside and next decision | “A modular monolith and PostgreSQL keep operation simple. Native runtime permissions, idempotency and restore were tested. No company is involved: review/rework scenarios are scripted, ROI is null, and independent quality review comes next.” |
 
@@ -17,7 +17,7 @@ Use the known L1 UUID from `work/dashboard-demo-reference.json` and its matching
 
 ## Short technical defense
 
-- **Why templates before a live agent?** They isolate data, retrieval, policy and review failures at low cost. Live reasoning has not demonstrated incremental value yet.
+- **Why templates before a live agent?** They isolate data, retrieval, policy and review failures at low cost. The actual 14-call free-tier model experiment did not demonstrate incremental value under the frozen extractive contract.
 - **Why no classifier?** Synthetic labels/current features do not support a defensible held-out predictive claim. A readiness gate blocks training.
 - **What does +14 points mean?** Focused direct versus legacy lexical task success on 100 previously exposed authored tasks, including expected abstentions; descriptive family interval +5 to +25. The exposed test-only interval includes no improvement. This is not business lift.
 - **What did you learn from failure?** Evidence can be authentic but irrelevant. Candidate conflicts/instruction checks hurt coverage; answerability needs independent evaluation.

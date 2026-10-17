@@ -43,6 +43,7 @@ def test_free_adapter_schema_query_usage_and_call_cap() -> None:
     provider = FreeGemini("fake-key", True, max_calls=1, interval_seconds=0, transport=transport)
     result = provider.generate(payload(), 2)
     assert result.content == "{}" and result.input_tokens == 50 and result.output_tokens == 20
+    assert provider.completed_generations == 1
     assert "onboarding kickoff" in seen[0]["contents"][0]["parts"][0]["text"]
     assert seen[0]["generationConfig"]["responseJsonSchema"] == {"type": "object"}
     assert "tools" not in seen[0]
@@ -70,6 +71,7 @@ def test_non_stop_completion_is_not_a_valid_recommendation() -> None:
         transport=lambda *args: envelope(candidates=[{"finishReason": "MAX_TOKENS"}]),
     )
     assert provider.generate(payload(), 2).content is None
+    assert provider.completed_generations == 0
 
 
 def test_quota_failure_halts_experiment_without_retry_or_fallback() -> None:

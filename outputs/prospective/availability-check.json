@@ -1,0 +1,25 @@
+{
+  "evidence_class": "observed_provider_availability_not_model_quality",
+  "owner_confirmed_free_tier_no_billing": true,
+  "initial_experiment": {
+    "model": "gemini-2.5-flash-lite",
+    "transport_calls": 1,
+    "http_status": 404,
+    "completed_generations": 0,
+    "report": "free-gemini-run-1/report.json"
+  },
+  "minimal_plumbing_probe": {
+    "model": "gemini-2.5-flash-lite",
+    "transport_calls": 1,
+    "http_status": 404,
+    "completed_generations": 0,
+    "provider_diagnostic": "Model unavailable to new users; provider recommends gemini-3.5-flash-lite."
+  },
+  "catalog_reads": 1,
+  "catalog_sha256": "b9467a001605f1710d486e8b5d06ce8c998ec88b9e0d30d88947db336bf40669",
+  "explicit_replacement": "gemini-3.5-flash-lite",
+  "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.5-flash-lite",
+  "no_paid_fallback": true,
+  "actual_invoice_usd": null,
+  "note": "Failed transport requests and the plumbing probe are not quality observations. Preserve them alongside the subsequent experiment."
+}

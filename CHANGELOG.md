@@ -5,7 +5,7 @@
 - Added a GitHub Pages interactive replay of actual recorded synthetic API responses, with no login, backend/model calls or persistent approvals. Desktop/mobile checks cover citation inspection, simulated decisions, visitor isolation, reset and unknown queries.
 - Added 24 new project-authored questions after freezing the policy and corrected query-aware extractive prompt. The template scored 17/24, with six inappropriate completions and one false abstention; failures remain preserved.
 - Corrected the provider payload to include the user's question and versioned the prompt. Added a one-attempt experiment option while preserving existing defaults.
-- Added an opt-in Gemini free-tier adapter with no-billing attestation, call ceiling, pacing, quota-failure halt, strict local validation and no paid fallback. No actual model result is claimed without a successful live execution.
+- Added an opt-in Gemini free-tier adapter with no-billing attestation, call ceiling, pacing, quota-failure halt, strict local validation and no paid fallback. Actual follow-up execution used 14 completed Gemini 3.5 Flash-Lite calls: 14/24 task successes versus 17/24 for the template, with nine local validation failures. No uplift was demonstrated. The initial unavailable-model request and a separate diagnostic probe are preserved; total generation-endpoint requests were 16, with no paid fallback.
 - Added a reproducible paired experiment and blank independent review/effort packets. Actual reviewers and measured human time remain unavailable.
 - Kept v0.1.0 artifacts unchanged; the new diagnostic is not a hidden, independently labeled predictive holdout.
 

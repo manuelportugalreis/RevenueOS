@@ -1,0 +1,16 @@
+{
+  "evidence_class": "live_provider_synthetic_diagnostic",
+  "model": "gemini-3.5-flash-lite",
+  "tasks": 24,
+  "template_successes": 17,
+  "model_successes": 14,
+  "model_validation_failures": 9,
+  "transport_calls": 14,
+  "completed_generations": 14,
+  "model_incremental_value_demonstrated": false,
+  "provisional_labels": true,
+  "independent_human_review": "pending",
+  "estimated_provider_charge_usd": "0 under operator-confirmed Free Tier without billing",
+  "actual_invoice_usd": null,
+  "source_sha256": "cd3856dbbd586316e49b9fbaaa042e3ee1d0b47f4fe89b2e17eabeb7ee423007"
+}

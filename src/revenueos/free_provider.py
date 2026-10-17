@@ -11,7 +11,7 @@ from typing import Any
 
 from revenueos.providers import NoRedirect, ProviderFailure, ProviderReply
 
-MODEL = "gemini-2.5-flash-lite"
+MODEL = "gemini-3.5-flash-lite"
 
 
 def gemini_transport(payload: dict[str, Any], key: str, timeout: float) -> dict[str, Any]:
@@ -53,6 +53,7 @@ class FreeGemini:
     calls: int = field(default=0, init=False)
     last_call: float = field(default=0, init=False)
     halt_reason: str | None = field(default=None, init=False)
+    completed_generations: int = field(default=0, init=False)
 
     @classmethod
     def from_environment(cls, max_calls: int = 24) -> "FreeGemini":
@@ -83,7 +84,7 @@ class FreeGemini:
                 "responseJsonSchema": payload["text"]["format"]["schema"],
                 "maxOutputTokens": payload["max_output_tokens"],
                 "temperature": 0,
-                "thinkingConfig": {"thinkingBudget": 0},
+                "thinkingConfig": {"thinkingLevel": "minimal"},
             },
         }
         try:
@@ -109,6 +110,8 @@ class FreeGemini:
                 for part in candidate.get("content", {}).get("parts", [])
                 if not part.get("thought")
             )
+            if stopped and content:
+                self.completed_generations += 1
             return ProviderReply(
                 content if stopped and content else None,
                 inputs,

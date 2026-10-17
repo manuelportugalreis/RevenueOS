@@ -144,6 +144,7 @@ def execute(
         "evidence_at": FIXED_AT.isoformat(),
         "live_model_status": "executed" if live else "not_run_missing_free_credentials",
         "live_transport_calls": provider.calls if provider else 0,
+        "completed_model_generations": provider.completed_generations if provider else 0,
         "provider_halt_reason": provider.halt_reason if provider else None,
         "model": MODEL if live else None,
         "prompt_version": PROMPT_VERSION,
@@ -154,7 +155,11 @@ def execute(
         "corpus_sha256": fingerprint(Path("data/intelligence/corpus.json")),
         "raw_sha256": fingerprint(raw),
         "summary": summarize(rows, arms),
-        "model_incremental_value": None if not live else "see_paired_fixture_diagnostic",
+        "model_incremental_value": (
+            "see_provisional_paired_fixture_diagnostic"
+            if provider and provider.completed_generations
+            else None
+        ),
         "actual_invoice_usd": None,
         "account_billing_verified_by_api": False,
         "free_tier_attested_by_operator": bool(live),

@@ -88,4 +88,21 @@ test("mobile replay refuses unknown questions and replays an abstention", async 
     path: "../outputs/RevenueOS-Public-Demo-Mobile.png",
     fullPage: true,
   });
+  await page.getByRole("button", { name: "Evaluation", exact: true }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Live model comparison: no demonstrated uplift",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("cell", { name: "17/24", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("cell", { name: "14/24", exact: true }),
+  ).toBeVisible();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.screenshot({
+    path: "../outputs/RevenueOS-Public-Demo-Evaluation.png",
+    fullPage: true,
+  });
 });

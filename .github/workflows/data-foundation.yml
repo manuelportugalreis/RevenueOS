@@ -79,7 +79,7 @@ jobs:
             outputs/RevenueOS-Dashboard-*.png
             frontend/test-results/
             outputs/public-demo-tests.xml
-            outputs/RevenueOS-Public-Demo-Mobile.png
+            outputs/RevenueOS-Public-Demo-*.png
 
   deploy-public-demo:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'

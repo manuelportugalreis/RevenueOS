@@ -24,6 +24,26 @@ def test_new_queries_and_frozen_policy_have_honest_provenance() -> None:
         assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == expected
 
 
+def test_published_model_summary_matches_recorded_attempts() -> None:
+    root = Path("outputs/prospective/free-gemini-run-2")
+    report = json.loads((root / "report.json").read_text())
+    raw = root / "attempts.jsonl"
+    assert hashlib.sha256(raw.read_bytes()).hexdigest() == report["raw_sha256"]
+    published = json.loads(Path("data/dashboard/prospective-evaluation.json").read_text())
+    assert (
+        published["source_sha256"]
+        == hashlib.sha256((root / "report.json").read_bytes()).hexdigest()
+    )
+    rows = [json.loads(line) for line in raw.read_text().splitlines()]
+    for arm, field in (
+        ("focused_template", "template_successes"),
+        ("gemini_free", "model_successes"),
+    ):
+        assert published[field] == sum(r["fixture_success"] for r in rows if r["arm"] == arm)
+    assert published["transport_calls"] == report["live_transport_calls"]
+    assert published["actual_invoice_usd"] is None and published["provisional_labels"]
+
+
 def test_live_preflight_cannot_touch_database_without_free_credentials(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,
