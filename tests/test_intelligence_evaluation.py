@@ -41,6 +41,7 @@ def test_fixture_builder_is_byte_reproducible(tmp_path: Path) -> None:
         check=True,
     )
     assert before == {path.name: path.read_bytes() for path in tmp_path.glob("*.json")}
+    assert (directory / "SHA256SUMS").read_bytes() == (tmp_path / "SHA256SUMS").read_bytes()
 
 
 @pytest.mark.integration
