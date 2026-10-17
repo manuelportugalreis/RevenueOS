@@ -43,6 +43,14 @@ jobs:
       - name: Build the presentation container
         run: docker build --tag revenueos:ci .
       - run: cd frontend && npx playwright install --with-deps chromium
+      - name: Build the public replay
+        run: npm run build:showcase --prefix frontend
+      - name: Verify the public replay without backend requests
+        run: npm run test:showcase --prefix frontend
+      - uses: actions/upload-pages-artifact@v4
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        with:
+          path: frontend/public-dist
       - name: Browser API and PostgreSQL flow
         env:
           PGPASSWORD: ci-local-only
@@ -70,3 +78,19 @@ jobs:
             outputs/dashboard-browser-tests.xml
             outputs/RevenueOS-Dashboard-*.png
             frontend/test-results/
+            outputs/public-demo-tests.xml
+            outputs/RevenueOS-Public-Demo-Mobile.png
+
+  deploy-public-demo:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: verify
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

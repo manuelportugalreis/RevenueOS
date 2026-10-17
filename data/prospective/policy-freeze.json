@@ -1,0 +1,11 @@
+{
+  "protocol": "prospective_authored_extractiveness_v1",
+  "date": "2026-10-17",
+  "policy_sha256": {
+    "src/revenueos/evidence.py": "839e9e9fb775bf88fd21699ff2bec1a047e35b4e72daf8386781f00acb27b154",
+    "src/revenueos/recommendations.py": "cbaccbc575256db0b12d90a4b76cdd3c009e0fc4b3de1307c6ab56182414c122"
+  },
+  "annotation_source": "project_authored_not_independent",
+  "tuning_after_results": "forbidden_for_this_run",
+  "formatting_note": "Whitespace normalized before the first prospective execution; policy semantics unchanged."
+}

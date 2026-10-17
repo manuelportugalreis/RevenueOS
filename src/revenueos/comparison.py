@@ -164,7 +164,7 @@ def summarize(rows: list[dict[str, Any]], arms: tuple[str, ...] = ARMS) -> dict[
         }
     if len(arms) == 2:
         report["paired_fixture_success_difference"] = paired_interval(rows, arms=arms)
-    else:
+    elif len(arms) == 4:
         report["paired_differences"] = {
             f"{second}_minus_{first}": paired_interval(
                 [row for row in rows if row["arm"] in (first, second)], arms=(first, second)

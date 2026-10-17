@@ -1,5 +1,7 @@
 # RevenueOS planning pack
 
+Latest increment: [public replay and zero-budget model experiment](32-public-demo-and-free-evaluation-guide.md), following [acceptance criteria](31-live-evaluation-and-public-demo-acceptance.md). The new project-authored template diagnostic is 17/24; no model comparison or independent review is claimed until actually executed. Historical counts/results below identify their own releases.
+
 Current implementation: [five-improvement design and reproduction](28-improvements-guide.md), [executed verification and risk register](29-improvements-verification.md), and [current architecture](22-architecture-current.md). The combined suite passed 207 tests; two browser journeys exercised a native restricted PostgreSQL login. Four-arm authored diagnostic results are 66/85/99/99 out of 100; one inappropriate completion remains, independent quality review is pending, and no held-out model accuracy is claimed. Everything remains fictitious: no pilot company or participants. Live Google/cloud/model evidence and client outcomes remain unavailable. Earlier verification documents below are historical snapshots, not current test counts.
 
 Status: architecture approved by the owner. Data foundation, intelligence, and bounded workflow increments authorized on 2026-10-16; live model evaluation deferred by explicit owner choice. Original planning date: 2026-10-16.

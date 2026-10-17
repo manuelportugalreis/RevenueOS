@@ -19,5 +19,6 @@ dist/
 node_modules/
 frontend/test-results/
 frontend/playwright-report/
+frontend/public-dist/
 outputs/publication/
 

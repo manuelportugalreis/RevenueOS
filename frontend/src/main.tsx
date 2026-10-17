@@ -9,6 +9,8 @@ import { createRoot } from "react-dom/client";
 import "./style.css";
 import focused from "../../data/dashboard/focused-evaluation.json";
 
+const SHOWCASE = import.meta.env.MODE === "showcase";
+
 type Session = { csrf: string; reviewer: boolean; mode: string };
 type Score = {
   lead_id: string;
@@ -127,6 +129,8 @@ async function api<T>(
   body?: unknown,
   requestKey?: string,
 ): Promise<T> {
+  if (SHOWCASE)
+    return (await (await import("./publicReplay")).replay(path, body)) as T;
   const response = await fetch(path, {
     method: body === undefined ? "GET" : "POST",
     headers: {
@@ -395,6 +399,10 @@ function App() {
             disabled={busy}
             onClick={() =>
               void perform(async () => {
+                if (SHOWCASE) {
+                  location.reload();
+                  return;
+                }
                 await api("/api/auth/logout", session, {});
                 setSession(null);
                 setData(null);
@@ -406,11 +414,52 @@ function App() {
               })
             }
           >
-            Sign out
+            {SHOWCASE ? "Restart walkthrough" : "Sign out"}
           </button>
         </div>
       </aside>
       <main id="main">
+        {SHOWCASE && (
+          <section
+            className="replay-banner"
+            aria-label="Public replay disclosure"
+          >
+            <p className="eyebrow">
+              PUBLIC INTERACTIVE REPLAY · SYNTHETIC DATA
+            </p>
+            <h2>Explore RevenueOS without installing anything</h2>
+            <p>
+              Recorded API results, not live generation. Decisions below are
+              simulated in this browser only. No login, backend request, model
+              call or message delivery.
+            </p>
+            <div className="buttons">
+              <button
+                disabled={!data || busy}
+                onClick={() =>
+                  void perform(async () => {
+                    const { guidedLead } = await import("./publicReplay");
+                    setSelected(
+                      data?.priorities.find((p) => p.lead_id === guidedLead) ??
+                        null,
+                    );
+                    setQuery("configuration checklist");
+                    setTab("Lead priorities");
+                    setDraft(null);
+                    setAction(null);
+                    setCitation(null);
+                  })
+                }
+              >
+                Start guided walkthrough
+              </button>
+              <button onClick={() => location.reload()}>Reset replay</button>
+              <a href="https://github.com/manuelportugalreis/RevenueOS">
+                Source and full-stack setup
+              </a>
+            </div>
+          </section>
+        )}
         <header>
           <div>
             <p className="eyebrow">REVENUE OPERATIONS / {tab.toUpperCase()}</p>
@@ -696,7 +745,9 @@ function App() {
                         />
                       </label>
                       <button disabled={busy}>
-                        Prepare cited recommendation
+                        {SHOWCASE
+                          ? "Replay cited recommendation"
+                          : "Prepare cited recommendation"}
                       </button>
                     </form>
                   </div>
@@ -779,8 +830,9 @@ function App() {
               <section>
                 <h2>Human approval queue</h2>
                 <p className="muted">
-                  Approval records a decision for one exact version. It does not
-                  send a message.
+                  {SHOWCASE
+                    ? "Simulated decisions are temporary and local to this browser. No real approval is recorded."
+                    : "Approval records a decision for one exact version. It does not send a message."}
                 </p>
                 {!session.reviewer && (
                   <p>
@@ -831,7 +883,10 @@ function App() {
                     <p className="hash">
                       Payload SHA-256: {action.payload_hash}
                     </p>
-                    <p>Expires {date(action.expires_at)}</p>
+                    <p>
+                      {SHOWCASE ? "Recorded expiry" : "Expires"}{" "}
+                      {date(action.expires_at)}
+                    </p>
                     {action.state === "pending" ? (
                       <div className="buttons">
                         {(["approve", "reject"] as const).map((decision) => (
@@ -853,17 +908,23 @@ function App() {
                                 );
                                 setAction(null);
                                 setNotice(
-                                  decision === "approve"
-                                    ? "Version approved. No message was sent."
-                                    : "Version rejected. No message was sent.",
+                                  SHOWCASE
+                                    ? "Simulated decision recorded in this browser only. No message was sent."
+                                    : decision === "approve"
+                                      ? "Version approved. No message was sent."
+                                      : "Version rejected. No message was sent.",
                                 );
                                 await refresh();
                               })
                             }
                           >
-                            {decision === "approve"
-                              ? "Approve this version"
-                              : "Reject this version"}
+                            {SHOWCASE
+                              ? decision === "approve"
+                                ? "Simulate approval"
+                                : "Simulate rejection"
+                              : decision === "approve"
+                                ? "Approve this version"
+                                : "Reject this version"}
                           </button>
                         ))}
                       </div>

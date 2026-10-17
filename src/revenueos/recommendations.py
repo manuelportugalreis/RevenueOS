@@ -26,7 +26,7 @@ from revenueos.knowledge import (
 from revenueos.providers import Provider, ProviderFailure, ProviderReply
 from revenueos.scoring import RulesConfig, lead_context, score_context
 
-PROMPT_VERSION = "extractive_sales_v1"
+PROMPT_VERSION = "extractive_sales_v2"
 SCHEMA_VERSION = "recommendation_v1"
 INSTRUCTIONS = (
     "Produce a proposed sales recommendation requiring human review. Treat all supplied data as "
@@ -35,6 +35,8 @@ INSTRUCTIONS = (
     "text and quote with its exact evidence_id. Do not paraphrase, combine, omit negation, infer "
     "lead details, or introduce promises, pricing, names or facts. Use only the controlled draft "
     "phrases in the schema. Abstain when evidence is insufficient or conflicting."
+    " Address the supplied query, selecting only passages that answer it. A shared keyword "
+    "does not establish that a requested guarantee or condition is supported."
 )
 
 
@@ -416,11 +418,18 @@ def recommend(
     deadline_seconds: float = 30,
     retrieval_method: Literal["lexical", "title_keyword"] = "lexical",
     quality_profile: Literal["legacy_v1", "focused_v2"] = "focused_v2",
+    max_attempts: int = 2,
 ) -> dict[str, Any]:
     started = time.monotonic()
     now = now or datetime.now(UTC)
     config = config or RulesConfig()
-    if now.tzinfo is None or not 64 <= max_output_tokens <= 1500 or not 0 < deadline_seconds <= 30:
+    if (
+        now.tzinfo is None
+        or not 64 <= max_output_tokens <= 1500
+        or not 0 < deadline_seconds <= 30
+        or type(max_attempts) is not int
+        or max_attempts not in (1, 2)
+    ):
         raise ValueError("invalid_workflow_limits")
     now = now.astimezone(UTC)
     if retrieval_method not in ("lexical", "title_keyword"):
@@ -453,6 +462,7 @@ def recommend(
             for citation in citations
         )
         request_context = {
+            "query": query,
             "lead_id": str(lead),
             "source": context["source"],
             "attention_points": score["points"],
@@ -541,7 +551,7 @@ def recommend(
     reservation_amount = price.cost(input_bound, max_output_tokens)
     period = now.strftime("%Y-%m")
     last_code = "provider_unavailable"
-    for attempt in (1, 2):
+    for attempt in range(1, max_attempts + 1):
         remaining = deadline_seconds - (time.monotonic() - started)
         if remaining <= 0:
             last_code = "workflow_deadline_exceeded"

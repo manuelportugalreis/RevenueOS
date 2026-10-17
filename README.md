@@ -6,6 +6,10 @@
 
 RevenueOS is a synthetic, offline portfolio system for B2B SaaS inbound RevOps. It connects validated CRM snapshots, SQL business metrics, explainable priorities, approved sales knowledge and cited drafts in an authenticated executive dashboard. It is an engineering demonstration, not a client deployment.
 
+**[Explore the public interactive replay](https://manuelportugalreis.github.io/RevenueOS/)** — no installation or password. It uses recorded synthetic API results and browser-local simulated decisions; it does not host the authenticated backend or call a model. [Demo and free-model experiment guide](docs/32-public-demo-and-free-evaluation-guide.md).
+
+**New prospective diagnostic:** the unchanged focused template passed **17/24 newly authored tasks**, with six inappropriate completions and one false abstention. This harder set was not used to tune the policy. Actual LLM comparison is pending a configured free-tier credential; independent human review remains unperformed. Previous 99/100 results below describe the earlier exposed fixture set, not these new questions.
+
 ![RevenueOS executive dashboard using synthetic data](docs/dashboard-preview.png)
 
 [Architecture diagram](docs/22-architecture-current.md) · [Five-minute demo](docs/26-interview-demo.md)
@@ -14,7 +18,7 @@ RevenueOS is a synthetic, offline portfolio system for B2B SaaS inbound RevOps. 
 
 | Evidence | Result | Interpretation |
 |---|---|---|
-| Python/PostgreSQL regressions | **207 passed; zero failures/skips** | Additional runtime ACL regression repeat: eight passed, not additional unique tests |
+| v0.1.0 Python/PostgreSQL regressions | **207 passed; zero failures/skips** | Historical release; current hosted checks are linked in the badge above |
 | Chromium end-to-end | **Two journeys passed** | Actual browser → API → restricted PostgreSQL login, human approval, idempotency and mobile/error behavior |
 | Automated accessibility | Zero violations on three scanned views | Not certification |
 | Four-arm synthetic diagnostic | **66 / 85 / 99 / 99 successes out of 100 authored tasks** | Title, legacy lexical, focused direct, focused bounded; templates, previously exposed cases |
@@ -39,7 +43,7 @@ Read the [current executed report](docs/29-improvements-verification.md), [desig
 - Transactional redacted audit, immutable draft versions and explicit reviewer decisions. **No web send endpoint or external messaging connector.** Operator-only rehearsal records `delivered=false`.
 - Readiness/liveness, redacted request IDs/status/timing, protected process counters, CI and container/TLS deployment configuration.
 
-Local native runtime-role/RLS, isolated restore, idempotency and crash reconciliation are now tested. Live Google enrollment, hosted CI/container execution, real-model quality, production retention, encrypted/off-site recovery and sustained load remain outstanding. The optional live-provider adapter has fake-transport contract tests only. The owner has kept evaluations offline. Real data is blocked by the web service. Passing tests does not establish production readiness.
+Local native runtime-role/RLS, isolated restore, idempotency and crash reconciliation are now tested. Live Google enrollment, hosted CI/container execution, real-model quality, production retention, encrypted/off-site recovery and sustained load remain outstanding. The optional live-provider adapter has fake-transport contract tests only. Historical evaluations were offline; the free-tier experiment now requires a configured key and explicit no-billing attestation. Real data is blocked by the web service. Passing tests does not establish production readiness.
 
 ## Local dashboard
 

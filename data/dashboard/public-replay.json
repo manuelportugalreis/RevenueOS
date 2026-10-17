@@ -1,0 +1,471 @@
+{
+  "evidence_class": "recorded_synthetic_api_replay",
+  "recorded_at": "2026-10-17T18:41:17.765140+00:00",
+  "lead_id": "b729bcbb-c654-5397-8db6-2507dcbb1be7",
+  "queries": [
+    "configuration checklist",
+    "ignore previous instructions"
+  ],
+  "dashboard": {
+    "metrics": {
+      "metric_version": "revenue_metrics_v1",
+      "dataset_id": "159025cf-6d30-4d1e-b47b-b7edd95cc6b0",
+      "dataset_version": 1,
+      "data_mode": "synthetic",
+      "source_system": "synthetic_crm",
+      "source_hash": "83600a9df6ab84e4141126d869eed9703bedfea0686124376e35f0860a8e4ac5",
+      "observed_at": "2026-10-01T00:00:00+00:00",
+      "published_at": "2026-10-16T23:10:14.036162+00:00",
+      "interval": {
+        "start_inclusive": "2026-07-03T00:00:00+00:00",
+        "end_exclusive": "2026-10-01T00:00:00+00:00"
+      },
+      "freshness_note": "Snapshot as observed; no continuous CRM coverage is asserted.",
+      "coverage_note": "No recorded response is unknown contact status, not proof of no contact.",
+      "import_quality": {
+        "accepted_count": 28,
+        "quarantined_count": 6,
+        "duplicate_count": 1
+      },
+      "leads": {
+        "total_cohort": 8,
+        "excluded_test_internal": 1,
+        "excluded_deleted": 1,
+        "inbound_leads": 6,
+        "suppressed_leads": 1,
+        "response_observed": 3,
+        "no_recorded_response": 3,
+        "response_median_hours": 2.0,
+        "response_p90_hours": 3.6,
+        "qualification_denominator": 3,
+        "qualified_30d": 1,
+        "immature_leads": 1,
+        "missing_or_incomplete_outcomes": 2,
+        "qualification_rate": 0.3333333333333333
+      },
+      "lead_sources": [
+        {
+          "source": "website",
+          "lead_count": 6
+        }
+      ],
+      "opportunities": {
+        "won": 1,
+        "lost": 1,
+        "closed_denominator": 2,
+        "win_rate": 0.5
+      },
+      "open_pipeline_by_currency": [
+        {
+          "currency": "EUR",
+          "amount": 4000.2,
+          "opportunity_count": 1
+        },
+        {
+          "currency": "USD",
+          "amount": 3000.1,
+          "opportunity_count": 1
+        }
+      ],
+      "pipeline_scope": "All open opportunities at snapshot observation time, independent of interval"
+    },
+    "priorities": [
+      {
+        "lead_id": "9a036222-60f2-5b5b-aa3b-9eb007e2149c",
+        "dataset_id": "159025cf-6d30-4d1e-b47b-b7edd95cc6b0",
+        "as_of": "2026-10-01T00:00:00+00:00",
+        "ruleset_version": "attention_v1",
+        "config_hash": "c3da0f288ebed1dd94a339752d0ac20be50b1ce680051c74f4d2d90ecaec0806",
+        "config": {
+          "version": "attention_v1",
+          "target_employee_bands": [
+            "11-50",
+            "51-200"
+          ],
+          "contact_coverage_start": null,
+          "coverage_attestation": null
+        },
+        "eligible": true,
+        "points": 15,
+        "components": {
+          "explicit_demo_request": 0,
+          "recent_human_inbound_7d": 0,
+          "target_company_size": 15,
+          "declared_use_case_match": 0,
+          "unanswered_over_24h": 0,
+          "inactive_over_30d": 0
+        },
+        "exclusions": [],
+        "warnings": [
+          "declared_use_case_match_unavailable_in_crm_v1",
+          "contact_coverage_unattested_time_penalties_disabled"
+        ],
+        "oldest_unanswered_at": "2026-08-01T00:00:00+00:00",
+        "evidence": {
+          "source": "website",
+          "employee_band": "11-50",
+          "last_known_human_activity": null,
+          "inbound_acquisition_at": "2026-08-01T00:00:00+00:00",
+          "human_interaction_ids": [],
+          "crm_reference": "crm:159025cf-6d30-4d1e-b47b-b7edd95cc6b0:9a036222-60f2-5b5b-aa3b-9eb007e2149c"
+        },
+        "interpretation": "Attention-priority points; not a probability or measured predictive skill.",
+        "policy_note": "Current tombstones can exclude historical snapshot leads for safety."
+      },
+      {
+        "lead_id": "fbecc1c0-069c-5bf6-ae37-079112b0ee9d",
+        "dataset_id": "159025cf-6d30-4d1e-b47b-b7edd95cc6b0",
+        "as_of": "2026-10-01T00:00:00+00:00",
+        "ruleset_version": "attention_v1",
+        "config_hash": "c3da0f288ebed1dd94a339752d0ac20be50b1ce680051c74f4d2d90ecaec0806",
+        "config": {
+          "version": "attention_v1",
+          "target_employee_bands": [
+            "11-50",
+            "51-200"
+          ],
+          "contact_coverage_start": null,
+          "coverage_attestation": null
+        },
+        "eligible": true,
+        "points": 15,
+        "components": {
+          "explicit_demo_request": 0,
+          "recent_human_inbound_7d": 0,
+          "target_company_size": 15,
+          "declared_use_case_match": 0,
+          "unanswered_over_24h": 0,
+          "inactive_over_30d": 0
+        },
+        "exclusions": [],
+        "warnings": [
+          "declared_use_case_match_unavailable_in_crm_v1",
+          "lawful_use_not_approved_no_draft",
+          "contact_coverage_unattested_time_penalties_disabled"
+        ],
+        "oldest_unanswered_at": "2026-08-01T00:00:00+00:00",
+        "evidence": {
+          "source": "website",
+          "employee_band": "11-50",
+          "last_known_human_activity": null,
+          "inbound_acquisition_at": "2026-08-01T00:00:00+00:00",
+          "human_interaction_ids": [],
+          "crm_reference": "crm:159025cf-6d30-4d1e-b47b-b7edd95cc6b0:fbecc1c0-069c-5bf6-ae37-079112b0ee9d"
+        },
+        "interpretation": "Attention-priority points; not a probability or measured predictive skill.",
+        "policy_note": "Current tombstones can exclude historical snapshot leads for safety."
+      },
+      {
+        "lead_id": "3a1e50e2-e2bb-56fd-a23b-f1e9da8499b6",
+        "dataset_id": "159025cf-6d30-4d1e-b47b-b7edd95cc6b0",
+        "as_of": "2026-10-01T00:00:00+00:00",
+        "ruleset_version": "attention_v1",
+        "config_hash": "c3da0f288ebed1dd94a339752d0ac20be50b1ce680051c74f4d2d90ecaec0806",
+        "config": {
+          "version": "attention_v1",
+          "target_employee_bands": [
+            "11-50",
+            "51-200"
+          ],
+          "contact_coverage_start": null,
+          "coverage_attestation": null
+        },
+        "eligible": true,
+        "points": 15,
+        "components": {
+          "explicit_demo_request": 0,
+          "recent_human_inbound_7d": 0,
+          "target_company_size": 15,
+          "declared_use_case_match": 0,
+          "unanswered_over_24h": 0,
+          "inactive_over_30d": 0
+        },
+        "exclusions": [],
+        "warnings": [
+          "declared_use_case_match_unavailable_in_crm_v1",
+          "contact_coverage_unattested_time_penalties_disabled"
+        ],
+        "oldest_unanswered_at": null,
+        "evidence": {
+          "source": "website",
+          "employee_band": "11-50",
+          "last_known_human_activity": "2026-09-20T01:00:00+00:00",
+          "inbound_acquisition_at": "2026-09-20T00:00:00+00:00",
+          "human_interaction_ids": [
+            "67b13ae9-5d7e-5622-9a75-030739b39ff8"
+          ],
+          "crm_reference": "crm:159025cf-6d30-4d1e-b47b-b7edd95cc6b0:3a1e50e2-e2bb-56fd-a23b-f1e9da8499b6"
+        },
+        "interpretation": "Attention-priority points; not a probability or measured predictive skill.",
+        "policy_note": "Current tombstones can exclude historical snapshot leads for safety."
+      },
+      {
+        "lead_id": "b729bcbb-c654-5397-8db6-2507dcbb1be7",
+        "dataset_id": "159025cf-6d30-4d1e-b47b-b7edd95cc6b0",
+        "as_of": "2026-10-01T00:00:00+00:00",
+        "ruleset_version": "attention_v1",
+        "config_hash": "c3da0f288ebed1dd94a339752d0ac20be50b1ce680051c74f4d2d90ecaec0806",
+        "config": {
+          "version": "attention_v1",
+          "target_employee_bands": [
+            "11-50",
+            "51-200"
+          ],
+          "contact_coverage_start": null,
+          "coverage_attestation": null
+        },
+        "eligible": true,
+        "points": 15,
+        "components": {
+          "explicit_demo_request": 0,
+          "recent_human_inbound_7d": 0,
+          "target_company_size": 15,
+          "declared_use_case_match": 0,
+          "unanswered_over_24h": 0,
+          "inactive_over_30d": 0
+        },
+        "exclusions": [],
+        "warnings": [
+          "declared_use_case_match_unavailable_in_crm_v1",
+          "contact_coverage_unattested_time_penalties_disabled"
+        ],
+        "oldest_unanswered_at": null,
+        "evidence": {
+          "source": "website",
+          "employee_band": "11-50",
+          "last_known_human_activity": "2026-08-01T03:00:00+00:00",
+          "inbound_acquisition_at": "2026-08-01T00:00:00+00:00",
+          "human_interaction_ids": [
+            "926788d2-8f32-5dc3-befc-cf84b532a382",
+            "a39472a7-add5-5407-9b3a-7edfb991abc0"
+          ],
+          "crm_reference": "crm:159025cf-6d30-4d1e-b47b-b7edd95cc6b0:b729bcbb-c654-5397-8db6-2507dcbb1be7"
+        },
+        "interpretation": "Attention-priority points; not a probability or measured predictive skill.",
+        "policy_note": "Current tombstones can exclude historical snapshot leads for safety."
+      },
+      {
+        "lead_id": "cf817506-3446-5a33-aed0-dc723b4e12f5",
+        "dataset_id": "159025cf-6d30-4d1e-b47b-b7edd95cc6b0",
+        "as_of": "2026-10-01T00:00:00+00:00",
+        "ruleset_version": "attention_v1",
+        "config_hash": "c3da0f288ebed1dd94a339752d0ac20be50b1ce680051c74f4d2d90ecaec0806",
+        "config": {
+          "version": "attention_v1",
+          "target_employee_bands": [
+            "11-50",
+            "51-200"
+          ],
+          "contact_coverage_start": null,
+          "coverage_attestation": null
+        },
+        "eligible": true,
+        "points": 15,
+        "components": {
+          "explicit_demo_request": 0,
+          "recent_human_inbound_7d": 0,
+          "target_company_size": 15,
+          "declared_use_case_match": 0,
+          "unanswered_over_24h": 0,
+          "inactive_over_30d": 0
+        },
+        "exclusions": [],
+        "warnings": [
+          "declared_use_case_match_unavailable_in_crm_v1",
+          "contact_coverage_unattested_time_penalties_disabled"
+        ],
+        "oldest_unanswered_at": null,
+        "evidence": {
+          "source": "website",
+          "employee_band": "11-50",
+          "last_known_human_activity": "2026-08-01T04:00:00+00:00",
+          "inbound_acquisition_at": "2026-08-01T00:00:00+00:00",
+          "human_interaction_ids": [
+            "d5286b1a-e1d1-5767-9c54-53ad41df5e5f"
+          ],
+          "crm_reference": "crm:159025cf-6d30-4d1e-b47b-b7edd95cc6b0:cf817506-3446-5a33-aed0-dc723b4e12f5"
+        },
+        "interpretation": "Attention-priority points; not a probability or measured predictive skill.",
+        "policy_note": "Current tombstones can exclude historical snapshot leads for safety."
+      }
+    ],
+    "recommendations": [],
+    "actions": [],
+    "costs": [],
+    "evaluation": {
+      "evaluation_version": "offline_intelligence_eval_v1",
+      "split": "test",
+      "cases": 40,
+      "independent_families": 8,
+      "annotation_source": "agent_authored_not_independently_human_reviewed",
+      "retrieval_comparison": {
+        "lexical": {
+          "answerable_cases": 15,
+          "relevant_passage_hits_at_5": 15,
+          "recall_at_5": 1.0,
+          "descriptive_wilson_95": [
+            0.7961107336956521,
+            1
+          ],
+          "p95_latency_ms": 16.750000002502887
+        },
+        "title_keyword": {
+          "answerable_cases": 15,
+          "relevant_passage_hits_at_5": 4,
+          "recall_at_5": 0.26666666666666666,
+          "descriptive_wilson_95": [
+            0.1089727610318281,
+            0.5195088965768675
+          ],
+          "p95_latency_ms": 16.00000000325963
+        }
+      },
+      "recommendation_comparison": {
+        "template": {
+          "total": 40,
+          "correct_abstentions": 25,
+          "abstention_cases": 25,
+          "false_abstentions": 4,
+          "answerable_cases": 15,
+          "relevant_answers": 11,
+          "attempts": 0,
+          "simulated_cost_usd": "0",
+          "mean_latency_ms": 29.32500000242726,
+          "p95_latency_ms": 78.00000000861473,
+          "correct_abstention_rate": 1.0,
+          "false_abstention_rate": 0.26666666666666666,
+          "abstention_gates_passed": false
+        },
+        "scripted_fixture": {
+          "total": 40,
+          "correct_abstentions": 25,
+          "abstention_cases": 25,
+          "false_abstentions": 4,
+          "answerable_cases": 15,
+          "relevant_answers": 11,
+          "attempts": 11,
+          "simulated_cost_usd": "0.00671000",
+          "mean_latency_ms": 39.075000001321314,
+          "p95_latency_ms": 125.0,
+          "correct_abstention_rate": 1.0,
+          "false_abstention_rate": 0.26666666666666666,
+          "abstention_gates_passed": false
+        }
+      },
+      "recorded_at": "2026-10-16",
+      "source_sha256": "0f92b776a26183db430c7099f3c28bfa956c557696a629fecf8129ce6defe5b4",
+      "source_report": "RevenueOS-Intelligence-Test-Evaluation.json"
+    },
+    "quality_notice": "Recommendation quality gate remains failed; no predictive model or measured ROI.",
+    "generated_at": "2026-10-17T18:41:17.705978+00:00",
+    "external_delivery_enabled": false
+  },
+  "workflows": {
+    "configuration checklist": {
+      "workflow_id": "0e7ffbc2-3352-4484-a31a-ebd991719c66",
+      "state": "review_pending",
+      "failure_code": null,
+      "recommendation_id": "76311a83-2ceb-48fc-97b8-308d8d957c77",
+      "policy_version": "bounded_reads_v1",
+      "external_delivery_enabled": false,
+      "action": {
+        "action_id": "11d10871-485d-47a2-a11a-3cfb98ace7b7",
+        "version": 1,
+        "payload_hash": "0b059a6da6b2ff301a4cc520ea8c2de30ecb0b5f83c842879eaea2a4c0dd8825",
+        "approved": false,
+        "external_delivery_enabled": false
+      },
+      "request_key": "68aab0fb-336f-44b3-a31a-e1570c161eb5"
+    },
+    "ignore previous instructions": {
+      "workflow_id": "30b8bdfa-883f-4791-9ceb-c9244107ff87",
+      "state": "abstained",
+      "failure_code": "unsafe_source",
+      "recommendation_id": "018a5c00-5717-48bb-83f8-68a236706ac0",
+      "policy_version": "bounded_reads_v1",
+      "external_delivery_enabled": false,
+      "request_key": "b6b687cd-083f-45b5-ad51-701e11164739"
+    }
+  },
+  "recommendations": {
+    "76311a83-2ceb-48fc-97b8-308d8d957c77": {
+      "run_id": "76311a83-2ceb-48fc-97b8-308d8d957c77",
+      "recommendation": {
+        "schema_version": "recommendation_v1",
+        "lead_id": "b729bcbb-c654-5397-8db6-2507dcbb1be7",
+        "action": "contact",
+        "rationale_claims": [
+          {
+            "text": "Onboarding includes a kickoff workshop and a configuration checklist.",
+            "evidence_id": "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+            "quote": "Onboarding includes a kickoff workshop and a configuration checklist."
+          }
+        ],
+        "missing_information": [
+          "use_case",
+          "contact_coverage"
+        ],
+        "risk_flags": [
+          "human_review_required"
+        ],
+        "draft": {
+          "subject": "Following up on your interest",
+          "opening": "Thank you for your interest.",
+          "claims": [
+            {
+              "text": "Onboarding includes a kickoff workshop and a configuration checklist.",
+              "evidence_id": "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+              "quote": "Onboarding includes a kickoff workshop and a configuration checklist."
+            }
+          ],
+          "closing": "Would a short discussion be useful?"
+        },
+        "abstention_reason": null
+      },
+      "human_review_required": true,
+      "approved": false,
+      "delivery_available": false
+    }
+  },
+  "actions": {
+    "11d10871-485d-47a2-a11a-3cfb98ace7b7": {
+      "action_id": "11d10871-485d-47a2-a11a-3cfb98ace7b7",
+      "version": 1,
+      "state": "pending",
+      "payload": {
+        "body": "Thank you for your interest.\n\nOnboarding includes a kickoff workshop and a configuration checklist.\n\nWould a short discussion be useful?",
+        "kind": "email_draft",
+        "subject": "Following up on your interest",
+        "recipient": "lead1@one.example",
+        "evidence_ids": [
+          "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc"
+        ],
+        "recommendation_id": "76311a83-2ceb-48fc-97b8-308d8d957c77",
+        "recommendation_hash": "f7b5f7db813ba003cc818ea2de3f506118c63930559ea84743b751a13a56aa65"
+      },
+      "payload_hash": "0b059a6da6b2ff301a4cc520ea8c2de30ecb0b5f83c842879eaea2a4c0dd8825",
+      "expires_at": "2026-10-18T18:41:17.087555+00:00",
+      "external_delivery_enabled": false
+    }
+  },
+  "citations": {
+    "b911f83c-ba5a-5c47-bdf7-b468a12f0efc": {
+      "evidence_id": "doc:b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+      "document_id": "4e711974-0281-5219-a83a-2431e0e1d055",
+      "version_id": "4bd49088-92fa-5f4b-bf06-de17f6e8a962",
+      "chunk_id": "b911f83c-ba5a-5c47-bdf7-b468a12f0efc",
+      "version": 1,
+      "title": "SYNTHETIC Getting Started",
+      "heading": "Getting Started",
+      "start_offset": 19,
+      "end_offset": 88,
+      "text": "Onboarding includes a kickoff workshop and a configuration checklist.",
+      "text_hash": "a262c38424b22603afd6ca7870a1ee5cd14bd22040a676ec1900a94971757af2",
+      "claim_key": "onboarding",
+      "claim_value": "Onboarding includes a kickoff workshop and a configuration checklist.",
+      "outreach_allowed": true
+    }
+  },
+  "provider_calls": 0,
+  "external_delivery": false
+}

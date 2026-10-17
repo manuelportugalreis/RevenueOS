@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
+    "build:showcase": "tsc --noEmit && vite build --mode showcase --base /RevenueOS/ --outDir public-dist",
+    "preview:showcase": "vite preview --outDir public-dist --base /RevenueOS/ --host 127.0.0.1 --port 4173",
+    "test:showcase": "playwright test --config playwright.showcase.config.ts",
     "test:e2e": "playwright test"
   },
   "dependencies": {

@@ -1,0 +1,8 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="7.096883">
+<testsuite name="replay.spec.ts" timestamp="2026-10-17T18:49:56.976Z" hostname="" tests="2" failures="0" skipped="0" time="3.646" errors="0">
+<testcase name="public recorded journey, citations, local approval and isolated reset" classname="replay.spec.ts" time="2.375">
+</testcase>
+<testcase name="mobile replay refuses unknown questions and replays an abstention" classname="replay.spec.ts" time="1.271">
+</testcase>
+</testsuite>
+</testsuites>
